@@ -302,6 +302,12 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
+
+
+
+
+
+
 |                                                   Question for Section 2                                                                                                             | Ressource FHIR  | Attributs / Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
 |  I provide consent to share my child’s/ person under my care’s sample, genomic data, and related health information for   | Valeur A  | Valeur B  |
@@ -315,6 +321,57 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |  Future use is limited to pediatric research   | Valeur E  | Valeur F  |
 |  Future use is limited to research involving a specific population  | Valeur E  | Valeur F   |
 |  Future use is limited to data generated from samples collected after the following consent form date    | Valeur E  | Valeur F   |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|                                                   Question for Section 3                                                                                                             | Ressource FHIR  | Attributs / Description |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
+|   I have had enough time to consider the information in this consent form and have :    | Valeur A  | Valeur B  |
+|   Had the opportunity to discuss genomic testing and its implication with a health professional     | Valeur C  | Valeur D  |
+|   Been given access to information about genomic testing  | Valeur E  | Valeur F  |
+|   Been able to ask questions until I am satisfied with the answers   | Valeur E  | Valeur F  |
+|   Been offered a copy of this consent form   | Valeur E  | Valeur F   |
+|   Been offered a copy of this consent form  | Valeur A  | Valeur B  |
+|   I provide consent to have genomic testing as summarized in these forms   | Valeur C  | Valeur D  |
+|  Child’s name  | Valeur E  | Valeur F  |
+|  Date of Birth   | Valeur E  | Valeur F  |
+|  Print Parent/ Guardian’s Name :  | Valeur E  | Valeur F   |
+|  Email/ Address :     | Valeur E  | Valeur F   |
+|  Health Professional AHPRA ID  | Valeur E  | Valeur F  |
+|  Health Professional Name   | Valeur E  | Valeur F  |
+
+
+
+
+
+
+|                                                   Question for Section 4                                                                                                             | Ressource FHIR  | Attributs / Description |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
+|   I have had enough time to consider the information in this consent form and have :    | Valeur A  | Valeur B  |
+|   Had the opportunity to discuss genomic testing and its implication with a health professional     | Valeur C  | Valeur D  |
+|   Been given access to information about genomic testing  | Valeur E  | Valeur F  |
+|   Been able to ask questions until I am satisfied with the answers   | Valeur E  | Valeur F  |
+|   Been offered a copy of this consent form   | Valeur E  | Valeur F   |
+|   Been offered a copy of this consent form  | Valeur A  | Valeur B  |
+|   I provide consent to have genomic testing as summarized in these forms   | Valeur C  | Valeur D  |
+|  Child’s name  | Valeur E  | Valeur F  |
+|  Date of Birth   | Valeur E  | Valeur F  |
+|  Print Parent/ Guardian’s Name :  | Valeur E  | Valeur F   |
+|  Email/ Address :     | Valeur E  | Valeur F   |
+|  Health Professional AHPRA ID  | Valeur E  | Valeur F  |
+|  Health Professional Name   | Valeur E  | Valeur F  |
 
 
 
