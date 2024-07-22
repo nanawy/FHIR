@@ -355,7 +355,6 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
-|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 
 
@@ -370,6 +369,36 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |     I have had an opportunity to ask questions about the study and I am satisfied with the answers I have received  | Valeur E  | Valeur F   |
 |     I understand that this study has been approved by a suitable Human Research Ethics Committee. I understand that the study is required to be carried out in line with the National Statement on Ethical Conduct in Human Research (2023)  | Valeur A  | Valeur |
 |     I understand I will receive a copy of this Information Statement and Consent Form | Valeur C  | Valeur D  |
+
+
+
+
+
+
+
+
+
+
+|                                                   Question for Section 5                                                                                                             | Ressource FHIR  | Attributs / Description |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
+|    Please choose from the following options : I consent, I do not consent  | Valeur A  | Valeur B  |
+|     Consent for use of my child’s NBS card and diagnostic specimen | Valeur C  | Valeur D  |
+|     Consent for future contact  | Valeur E  | Valeur F  |
+|     Child’s Full name , co-signature (optional) & Date  | Valeur E  | Valeur F  |
+|     Parent / Guardian 1 & 2 ’s Full name , co-signature (optional) & Date  | Valeur E  | Valeur F   |
+|    I would like to receive a summary of the study findings Y/N  | Valeur E  | Valeur F  |
+|     contact details  : email , phone number | Valeur E  | Valeur F   |
+
+
+
+
+
+
+
+
+
+
+
 
 
 
