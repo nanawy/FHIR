@@ -276,9 +276,9 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
-|                                                   Question for Section 1   :   Genomic Testing Details                                                                                                         | Ressource FHIR  | Attributs / Description |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
-|  It is my choice for my child/person under my care to have genomic testing  | Valeur A  | Valeur B  |
+|                                                   Question for Section 1   :   Genomic Testing Details                                                                                                         | Ressource FHIR  | Attributs  |Description|
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|------------|
+|  It is my choice for my child/person under my care to have genomic testing  | CanonicalResource  | url, status  | provide url for the test, status (active,...) |
 |  I [Parent/Guardian Name] , understand that my child's/ the person under my care's DNA will be tested by :   | Valeur C  | Valeur D  |
 |  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
 |  to look for changes in genes that may be associated with :   | Valeur E  | Valeur F  |
@@ -405,6 +405,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
+
 C- RECAP RESSOURCES 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -412,11 +413,23 @@ C- RECAP RESSOURCES
  | RESSOURCES (level 5)  | ATTRIBUTS  | WHY  |
  |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
  |  Binary     | ContentType , data          | to handle genomic data files,  or to share genomic test (as a binary file : pdf,..)        |         
- 
-
-
-
-
+ |  Bundle     |   identifier, type, link, entry, signature    |    to group all consent forms, test results ... to a single bundle      |  
+ |   CanonicalResource    |     url, version, status, description, publisher     |  provide unique identifiers, url for the form, identify different versions and statuses       |  
+ |       |        |       |  
+ |       |          |         |  
+ |       |        |       |  
+ |       |          |         |  
+ |       |        |       |  
+ |       |          |         |  
+ |       |        |       |  
+ |       |          |         |  
+ |       |        |       |  
+ |       |          |         |  
+ |       |        |       |  
+ |       |          |         |  
+ |       |        |       |  
+ |       |          |         |  
+ |       |        |       |  
 
 
 
