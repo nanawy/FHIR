@@ -282,8 +282,8 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |  I [Parent/Guardian Name] , understand that my child's/ the person under my care's DNA will be tested by :   | Valeur C  | Valeur D  |
 |  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
 |  to look for changes in genes that may be associated with :   | Valeur E  | Valeur F  |
-|  ### About the Test  |
-|  Genomic test results are based on current knowledge, which may change in the future  | Valeur A  | Valeur B  |
+|  [Condition or Clinical Indication]   | Valeur E  | Valeur F  |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
 |  Genomic test results are based on current knowledge, which may change in the future  | Valeur A  | Valeur B  |
 |  If I change my mind, I can choose not to be told about the result    | Valeur C  | Valeur D  |
 |  This test might find a cause for the condition(s)      | Valeur E  | Valeur F  |
