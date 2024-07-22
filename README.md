@@ -308,7 +308,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
-|                                                   Question for Section 2   : Consent for Data Sharing                                                                                                          | Ressource FHIR  | Attributs / Description |
+|                                                   Question for Section 2   : Consent for Data Sharing                                                                                                          | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
 |  I provide consent to share my child’s/ person under my care’s sample, genomic data, and related health information for   | Binary  | Valeur B  |
 |  Data is available for future general research use    | Binary | Valeur D  |
@@ -336,7 +336,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
-|                                                   Question for Section 3   :  Consent Summary                                                                                                         | Ressource FHIR  | Attributs / Description |
+|                                                   Question for Section 3   :  Consent Summary                                                                                                         | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
 |   I have had enough time to consider the information in this consent form and have :    | CanonicalResource  | name, title  | provide identifiers for different consent summaries   |
 |   Had the opportunity to discuss genomic testing and its implication with a health professional     | Valeur C  | Valeur D  |
@@ -359,7 +359,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
-|                                                   Question for Section 4  :   Confirmation for Research Study                                                                                                         | Ressource FHIR  | Attributs / Description |
+|                                                   Question for Section 4  :   Confirmation for Research Study                                                                                                         | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
 |     I have read the information statement about the study and I understand its contents   | Valeur A  | Valeur B  |
 |     I understand what my child and I have to do in this study     | Valeur C  | Valeur D  |
@@ -378,7 +378,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
-|                                            Question for Section 5 :         Genomic Testing Consent                                                                                            | Ressource FHIR  | Attributs / Description |
+|                                            Question for Section 5 :         Genomic Testing Consent                                                                                            | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
 |    Please choose from the following options : I consent, I do not consent  | Valeur A  | Valeur B  |
 |     Consent for use of my child’s NBS card and diagnostic specimen | Valeur C  | Valeur D  |
@@ -393,7 +393,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
-|                                                   Question for Section 6        :   Declaration by Researcher                                                                          | Ressource FHIR  | Attributs / Description |
+|                                                   Question for Section 6        :   Declaration by Researcher                                                                          | Ressource FHIR  | Attributs  | Description|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
 |   I have explained the study to the parent(s)/guardian(s) who has signed above,...  | CanonicalResource | publisher  | to indicate the name of the researcher  |
 |        |    Location |  managingOrganization , address, name, hoursOfOperation | physical adress, the responsible of the site... |
