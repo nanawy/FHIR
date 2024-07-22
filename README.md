@@ -3,7 +3,7 @@
 
 Note: All parties signing the consent form must date their own signature. 
 
-##Section 1 : Genomic Testing Details
+## Section 1 : Genomic Testing Details
 
 
  It is my choice for my child/person under my care to have genomic testing.
@@ -18,13 +18,13 @@ to look for changes in genes that may be associated with :
 
 
 
- #About the Test
+ # About the Test
 
-[] Genomic test results are based on current knowledge, which may change in the future 
-[] If I change my mind, I can choose not to be told about the result 
+[ ] Genomic test results are based on current knowledge, which may change in the future 
+[ ] If I change my mind, I can choose not to be told about the result 
 
 
-#Potential Outcomes
+# Potential Outcomes
 
 [] This test might find a cause for the condition(s)
 [] This test might not find a cause for the condition(s)
@@ -34,7 +34,7 @@ to look for changes in genes that may be associated with :
 [] Further tests or information sharing may be needed to finalize the result 
 
 
-#Results
+# Results
 
 [] I will be told the results by a health professional
 [] Results may have implications for the health/genetic risks for ;y child/the person under my care and family members
@@ -44,7 +44,7 @@ to look for changes in genes that may be associated with :
 [] Results are confidential and may not be release without my consent unless allowed by law
 [] The following individual can be given my child's / the person under my care's results if I am unable to be contacted 
 
-#Contact Information : 
+# Contact Information : 
 
 Contact Name : 
 Contact Number : 
@@ -52,7 +52,7 @@ Relationship to Patient :
 
 
 
-##Section 2 : Consent for Data Sharing
+## Section 2 : Consent for Data Sharing
 
 I provide consent to share my child’s/ person under my care’s sample, genomic data, and related health information for 
 
@@ -60,7 +60,7 @@ I provide consent to share my child’s/ person under my care’s sample, genomi
 (CASE) Future is limited for health/medical/biomedical research 
 (CASE) Future use is limited to research involving the following disease area(s)
 
-#Specified diseases : 
+# Specified diseases : 
 
 (CASE) Future commercial use is prohibited 
 (CASE) Future use by for-profit entities is prohibited 
@@ -77,7 +77,7 @@ I provide consent to share my child’s/ person under my care’s sample, genomi
 
 
 
-##Section 3 :  Consent Summary 
+## Section 3 :  Consent Summary 
 
  I have had enough time to consider the information in this consent form and have : 
 
@@ -102,7 +102,7 @@ Note: All parties signing the consent form must date their own signature.
 
 
 
-##Section 4: Confirmation for Research Study
+## Section 4: Confirmation for Research Study
 
 
 
@@ -138,7 +138,7 @@ I confirm that :
  
 
 
-##Section 5: Genomic Testing Consent
+## Section 5: Genomic Testing Consent
 
 Please choose from the following options 
 I consent
@@ -183,7 +183,7 @@ Note: All parties signing the consent form must date their own signature.
 
 
  
-#Please choose from the following options 
+# Please choose from the following options 
 Yes
 No
 I would like to receive a summary of the study findings
@@ -213,7 +213,7 @@ Phone number
 
 
 
-##Section 06 :  Declaration by Researcher
+## Section 06 :  Declaration by Researcher
 
 I have explained the study to the parent(s)/guardian(s) who has signed above. I believe that they understand the purpose, extent, and possible risks of their child’s involvement in this study. 
   
