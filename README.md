@@ -287,13 +287,24 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
-
-|  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
-|  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
-
-
-
-
+|                                                   Question for Section 2                                                                                                             | Ressource FHIR  | Attributs / Description |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
+|  Genomic test results are based on current knowledge, which may change in the future  | Valeur A  | Valeur B  |
+|  If I change my mind, I can choose not to be told about the result    | Valeur C  | Valeur D  |
+|  This test might find a cause for the condition(s)      | Valeur E  | Valeur F  |
+|  This test might not find a cause for the condition(s)   | Valeur E  | Valeur F  |
+|  This result might be of 'unknown significance', which means it cannot be understood today   | Valeur E  | Valeur F  |
+|  There is a chance that genomic testing could find other medical conditions (incidental findings)  | Valeur A  | Valeur B  |
+|  Genomic testing may show unexpected family relationships   | Valeur C  | Valeur D  |
+|  Further tests or information sharing may be needed to finalize the result  | Valeur E  | Valeur F  |
+|  I will be told the results by a health professional   | Valeur E  | Valeur F  |
+|  Results may have implications for the health/genetic risks for the child/the person under my care and family members   | Valeur E  | Valeur F  |
+|  Results can be used to inform counselling and testing of family members, though my child's/ the person under my care's identity will not be revealed to them | Valeur A  | Valeur B  |
+|  Results from these tests may affect my child's /the person under my care's ability to obtain some types of insurance    | Valeur C  | Valeur D  |
+|  The results will be available to health professionals involved in the care of my children/the person under my care      | Valeur E  | Valeur F  |
+|  Results are confidential and may not be release without my consent unless allowed by law   | Valeur E  | Valeur F  |
+|  The following individual can be given my child's / the person under my care's results if I am unable to be contacted  | Valeur E  | Valeur F  |
+| Contact Information :  Name , Number : Relationship to Patient  | Valeur E  | Valeur F  |
 
 
 
