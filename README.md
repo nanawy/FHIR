@@ -278,14 +278,18 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                                   Question for Section 1                                                                                                             | Ressource FHIR  | Attributs / Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
+|  It is my choice for my child/person under my care to have genomic testing  | Valeur A  | Valeur B  |
+|  I [Parent/Guardian Name] , understand that my child's/ the person under my care's DNA will be tested by :   | Valeur C  | Valeur D  |
+|  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
+|  to look for changes in genes that may be associated with :   | Valeur E  | Valeur F  |
+| [Condition or Clinical Indication]   | Valeur E  | Valeur F  |
 
-| Ligne 1   | Valeur A  | Valeur B  |
-| Ligne 2   | Valeur C  | Valeur D  |
-| Ligne 3   | Valeur E  | Valeur F  |
 
 
 
 
+|  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
+|  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
 
 
 
