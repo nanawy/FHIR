@@ -411,6 +411,7 @@ C- RECAP RESSOURCES
 
  
  | RESSOURCES  | ATTRIBUTS  | WHY  |
+ |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
  |  Binary     | ContentType , data          | to handle genomic data files,  or to share genomic test (as a binary file : pdf,..)        |         
 
 
