@@ -290,7 +290,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |  This result might be of 'unknown significance', which means it cannot be understood today   | Valeur E  | Valeur F  |
 |  There is a chance that genomic testing could find other medical conditions (incidental findings)  | Valeur A  | Valeur B  |
 |  Genomic testing may show unexpected family relationships   | Valeur C  | Valeur D  |
-|  Further tests or information sharing may be needed to finalize the result  | Valeur E  | Valeur F  |
+|  Further tests or information sharing may be needed to finalize the result  | Binary  | Valeur F  |
 |  I will be told the results by a health professional   | Valeur E  | Valeur F  |
 |  Results may have implications for the health/genetic risks for the child/the person under my care and family members   | Valeur E  | Valeur F  |
 |  Results can be used to inform counselling and testing of family members, though my child's/ the person under my care's identity will not be revealed to them | Valeur A  | Valeur B  |
@@ -310,8 +310,8 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                                   Question for Section 2   : Consent for Data Sharing                                                                                                          | Ressource FHIR  | Attributs / Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
-|  I provide consent to share my child’s/ person under my care’s sample, genomic data, and related health information for   | Valeur A  | Valeur B  |
-|  Data is available for future general research use    | Valeur C  | Valeur D  |
+|  I provide consent to share my child’s/ person under my care’s sample, genomic data, and related health information for   | Binary  | Valeur B  |
+|  Data is available for future general research use    | Binary | Valeur D  |
 |  Future is limited for health/medical/biomedical research | Valeur E  | Valeur F  |
 |  Future commercial use is prohibited   | Valeur E  | Valeur F  |
 |  Future use for methods research (analytic/software/technology development) outside the bounds of the other specified restrictions is prohibited   | Valeur E  | Valeur F   |
@@ -342,8 +342,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |   Had the opportunity to discuss genomic testing and its implication with a health professional     | Valeur C  | Valeur D  |
 |   Been given access to information about genomic testing  | Valeur E  | Valeur F  |
 |   Been able to ask questions until I am satisfied with the answers   | Valeur E  | Valeur F  |
-|   Been offered a copy of this consent form   | Valeur E  | Valeur F   |
-|   Been offered a copy of this consent form  | Valeur A  | Valeur B  |
+|   Been offered a copy of this consent form   | Binary  | Valeur F   |
 |   I provide consent to have genomic testing as summarized in these forms   | Valeur C  | Valeur D  |
 |  Child’s name  | Valeur E  | Valeur F  |
 |  Date of Birth   | Valeur E  | Valeur F  |
@@ -386,7 +385,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |     Consent for future contact  | Valeur E  | Valeur F  |
 |     Child’s Full name , co-signature (optional) & Date  | Valeur E  | Valeur F  |
 |     Parent / Guardian 1 & 2 ’s Full name , co-signature (optional) & Date  | Valeur E  | Valeur F   |
-|    I would like to receive a summary of the study findings Y/N  | Valeur E  | Valeur F  |
+|    I would like to receive a summary of the study findings Y/N  | Binary  | Valeur F  |
 |     contact details  : email , phone number | Valeur E  | Valeur F   |
 
 
@@ -410,9 +409,10 @@ C- RECAP RESSOURCES
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
  
- | RESSOURCES  | ATTRIBUTS  | WHY  |
+ | RESSOURCES (level 5)  | ATTRIBUTS  | WHY  |
  |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
  |  Binary     | ContentType , data          | to handle genomic data files,  or to share genomic test (as a binary file : pdf,..)        |         
+ 
 
 
 
