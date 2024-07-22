@@ -276,8 +276,9 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
-|                                                   Question/Section                                                                                                             | Ressource FHIR  | Attributs / Description |
+|                                                   Question for Section 1                                                                                                             | Ressource FHIR  | Attributs / Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
+
 | Ligne 1   | Valeur A  | Valeur B  |
 | Ligne 2   | Valeur C  | Valeur D  |
 | Ligne 3   | Valeur E  | Valeur F  |
