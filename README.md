@@ -394,6 +394,12 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
+|                                                   Question for Section 6                                                                                                             | Ressource FHIR  | Attributs / Description |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
+|   I have explained the study to the parent(s)/guardian(s) who has signed above,...  | Valeur A  | Valeur B  |
+|   Research Team Member Name, Signature & Date | Valeur C  | Valeur D  |
+
+
 
 
 
