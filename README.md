@@ -354,7 +354,11 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 
 
+
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+
 
 
 |                                                   Question for Section 4                                                                                                             | Ressource FHIR  | Attributs / Description |
