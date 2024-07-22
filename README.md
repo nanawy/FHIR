@@ -200,7 +200,7 @@ Consent for me to be contacted again after this study for potential follow-up st
 ###### Parent 2/Guardian 2 Name 
 
 ###### Parent 2/Guardian 2 Signature 
-######Date                                                                     
+###### Date                                                                     
                                                                    
 
  
@@ -208,12 +208,12 @@ Note: All parties signing the consent form must date their own signature.
 
 
  
-###### Please choose from the following options : Yes / No
+#### Please choose from the following options : Yes / No
 
 I would like to receive a summary of the study findings :  [ ]  /     [ ]
  
  
-###### If yes, please provide your contact details
+#### If yes, please provide your contact details
 
 Email : 
 
