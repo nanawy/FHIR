@@ -278,7 +278,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                                   Question for Section 1   :   Genomic Testing Details                                                                                                         | Ressource FHIR  | Attributs  |Description|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|------------|
-|  It is my choice for my child/person under my care to have genomic testing  | CanonicalResource  | url, status  | provide url for the test, status (active,...) |
+|  It is my choice for my child/person under my care to have genomic testing  | CanonicalResource  | url, status, version | provide url for the test, status (active,draft...), manage different versions|
 |  I [Parent/Guardian Name] , understand that my child's/ the person under my care's DNA will be tested by :   | Valeur C  | Valeur D  |
 |  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
 |  to look for changes in genes that may be associated with :   | Valeur E  | Valeur F  |
@@ -338,7 +338,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                                   Question for Section 3   :  Consent Summary                                                                                                         | Ressource FHIR  | Attributs / Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
-|   I have had enough time to consider the information in this consent form and have :    | Valeur A  | Valeur B  |
+|   I have had enough time to consider the information in this consent form and have :    | CanonicalResource  | name, title  | provide identifiers for different consent summaries   |
 |   Had the opportunity to discuss genomic testing and its implication with a health professional     | Valeur C  | Valeur D  |
 |   Been given access to information about genomic testing  | Valeur E  | Valeur F  |
 |   Been able to ask questions until I am satisfied with the answers   | Valeur E  | Valeur F  |
@@ -395,8 +395,9 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                                   Question for Section 6        :   Declaration by Researcher                                                                          | Ressource FHIR  | Attributs / Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
-|   I have explained the study to the parent(s)/guardian(s) who has signed above,...  | Valeur A  | Valeur B  |
-|   Research Team Member Name, Signature & Date | Valeur C  | Valeur D  |
+|   I have explained the study to the parent(s)/guardian(s) who has signed above,...  | CanonicalResource | publisher  | to indicate the name of the researcher  |
+|        |    Location |  managingOrganization , address, name, hoursOfOperation | physical adress, the responsible of the site... |
+|   Research Team Member Name, Signature & Date |   | Valeur D  |
 
 
 
@@ -415,7 +416,7 @@ C- RECAP RESSOURCES
  |  Binary     | ContentType , data          | to handle genomic data files,  or to share genomic test (as a binary file : pdf,..)        |         
  |  Bundle     |   identifier, type, link, entry, signature    |    to group all consent forms, test results ... to a single bundle      |  
  |   CanonicalResource    |     url, version, status, description, publisher     |  provide unique identifiers, url for the form, identify different versions and statuses       |  
- |       |        |       |  
+ |    Location    |    name, address, hoursOfOperation, identifier, type, managingOrganization (reference)    |   location specific details    |  
  |       |          |         |  
  |       |        |       |  
  |       |          |         |  
