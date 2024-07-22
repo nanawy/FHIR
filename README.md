@@ -383,10 +383,10 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |                                            Question for Section 5 :         Genomic Testing Consent                                                                                            | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
 |    Please choose from the following options : I consent, I do not consent  | Valeur A  | Valeur B  |
-|     Consent for use of my child’s NBS card and diagnostic specimen | Valeur C  | Valeur D  |
-|     Consent for future contact  | Valeur E  | Valeur F  |
-|     Child’s Full name , co-signature (optional) & Date  | Valeur E  | Valeur F  |
-|     Parent / Guardian 1 & 2 ’s Full name , co-signature (optional) & Date  | Valeur E  | Valeur F   |
+|     Consent for use of my child’s NBS card and diagnostic specimen | Observation | Valeur D  |
+|     Consent for future contact  | Observation | Valeur F  |
+|     Child’s Full name , co-signature (optional) & Date  | Observation  | Valeur F  |
+|     Parent / Guardian 1 & 2 ’s Full name , co-signature (optional) & Date  | Observation  | Valeur F   |   |
 |    I would like to receive a summary of the study findings Y/N  | Binary  | Valeur F  |
 |     contact details  : email , phone number | Valeur E  | Valeur F   |
 
