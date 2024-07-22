@@ -367,7 +367,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |     I voluntarily consent for myself and/or my child to take part in this research study   | Valeur E  | Valeur F  |
 |     I have had an opportunity to ask questions about the study and I am satisfied with the answers I have received  | Valeur E  | Valeur F   |
 |     I understand that this study has been approved by a suitable Human Research Ethics Committee. I understand that the study is required to be carried out in line with the National Statement on Ethical Conduct in Human Research (2023)  | Valeur A  | Valeur |
-|     I understand I will receive a copy of this Information Statement and Consent Form | Valeur C  | Valeur D  |
+|     I understand I will receive a copy of this Information Statement and Consent Form | Binary  | ContentType , data     |   or to share genomic fils (as a binary file : pdf,..)  |
 
 
 
