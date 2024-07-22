@@ -176,25 +176,32 @@ Please choose from the following options : I consent / I do not consent
 
 
 
-### b. Consent for use of my child’s NBS card and diagnostic specimen                [ ]                [ ] 
+### b. Consent for use of my child’s NBS card and diagnostic specimen        :        [ ]        /        [ ] 
 Consent for researchers to access my child’s NBS card and diagnostic specimen to see
 if it is possible to detect the gene change/changes in my child from the original heel prick sample taken when they were born
  
  
-### c. Consent for future contact                                              [ ]                        [ ] 
+### c. Consent for future contact                                             : [ ]           /             [ ] 
 Consent for me to be contacted again after this study for potential follow-up studies 
  
  
-###### Child’s Full name                                              Child’s co-signature (optional) 
-                                                                         Date 
+###### Child’s Full name                                    
+
+###### Child’s co-signature (optional) 
+###### Date 
   
  
-###### Parent 1/Guardian 1 Name                                        Parent 1/Guardian 1 Signature 
-                                                                        Date 
+###### Parent 1/Guardian 1 Name      
 
+###### Parent 1/Guardian 1 Signature 
+ ###### Date 
+                                                                        
   
-###### Parent 2/Guardian 2 Name                                       Parent 2/Guardian 2 Signature 
-                                                                       Date 
+###### Parent 2/Guardian 2 Name 
+
+###### Parent 2/Guardian 2 Signature 
+######Date                                                                     
+                                                                   
 
  
 Note: All parties signing the consent form must date their own signature. 
@@ -203,7 +210,7 @@ Note: All parties signing the consent form must date their own signature.
  
 ###### Please choose from the following options : Yes / No
 
-I would like to receive a summary of the study findings :  [ ]       [ ]
+I would like to receive a summary of the study findings :  [ ]  /     [ ]
  
  
 ###### If yes, please provide your contact details
@@ -236,10 +243,10 @@ I have explained the study to the parent(s)/guardian(s) who has signed above. I 
   
   
   
-Research Team Member Name 
+###### Research Team Member Name 
   
-Research Team Member Signature 
+###### Research Team Member Signature 
   
-Date 
+###### Date 
 
 Note: All parties signing the consent form must date their own signature. 
