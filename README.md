@@ -283,7 +283,6 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
 |  to look for changes in genes that may be associated with :   | Valeur E  | Valeur F  |
 |  [Condition or Clinical Indication]   | Valeur E  | Valeur F  |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
 |  Genomic test results are based on current knowledge, which may change in the future  | Valeur A  | Valeur B  |
 |  If I change my mind, I can choose not to be told about the result    | Valeur C  | Valeur D  |
 |  This test might find a cause for the condition(s)      | Valeur E  | Valeur F  |
@@ -305,11 +304,19 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                                   Question for Section 2                                                                                                             | Ressource FHIR  | Attributs / Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
-|  Genomic test results are based on current knowledge, which may change in the future  | Valeur A  | Valeur B  |
-|  If I change my mind, I can choose not to be told about the result    | Valeur C  | Valeur D  |
-|  This test might find a cause for the condition(s)      | Valeur E  | Valeur F  |
-|  This test might not find a cause for the condition(s)   | Valeur E  | Valeur F  |
-|  This result might be of 'unknown significance', which means it cannot be understood today   | Valeur E  | Valeur F  
+|  I provide consent to share my child’s/ person under my care’s sample, genomic data, and related health information for   | Valeur A  | Valeur B  |
+|  Data is available for future general research use    | Valeur C  | Valeur D  |
+|  Future is limited for health/medical/biomedical research | Valeur E  | Valeur F  |
+|  Future commercial use is prohibited   | Valeur E  | Valeur F  |
+|  Future use for methods research (analytic/software/technology development) outside the bounds of the other specified restrictions is prohibited   | Valeur E  | Valeur F   |
+|   Future use of aggregate-level data for general research purposes is prohibited   | Valeur A  | Valeur B  |
+|  Future use as a control set for diseases other than those specified is prohibited    | Valeur C  | Valeur D  |
+|  Future use is limited to research involving a particular gender  | Valeur E  | Valeur F  |
+|  Future use is limited to pediatric research   | Valeur E  | Valeur F  |
+|  Future use is limited to research involving a specific population  | Valeur E  | Valeur F   |
+|  Future use is limited to data generated from samples collected after the following consent form date    | Valeur E  | Valeur F   |
+
+
 
 
 
