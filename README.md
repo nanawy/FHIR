@@ -359,19 +359,13 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                                   Question for Section 4                                                                                                             | Ressource FHIR  | Attributs / Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
-|   I have had enough time to consider the information in this consent form and have :    | Valeur A  | Valeur B  |
-|   Had the opportunity to discuss genomic testing and its implication with a health professional     | Valeur C  | Valeur D  |
-|   Been given access to information about genomic testing  | Valeur E  | Valeur F  |
-|   Been able to ask questions until I am satisfied with the answers   | Valeur E  | Valeur F  |
-|   Been offered a copy of this consent form   | Valeur E  | Valeur F   |
-|   Been offered a copy of this consent form  | Valeur A  | Valeur B  |
-|   I provide consent to have genomic testing as summarized in these forms   | Valeur C  | Valeur D  |
-|  Child’s name  | Valeur E  | Valeur F  |
-|  Date of Birth   | Valeur E  | Valeur F  |
-|  Print Parent/ Guardian’s Name :  | Valeur E  | Valeur F   |
-|  Email/ Address :     | Valeur E  | Valeur F   |
-|  Health Professional AHPRA ID  | Valeur E  | Valeur F  |
-|  Health Professional Name   | Valeur E  | Valeur F  |
+|     I have read the information statement about the study and I understand its contents   | Valeur A  | Valeur B  |
+|     I understand what my child and I have to do in this study     | Valeur C  | Valeur D  |
+|     I understand the risks my child could face because of their involvement in this study  | Valeur E  | Valeur F  |
+|     I voluntarily consent for myself and/or my child to take part in this research study   | Valeur E  | Valeur F  |
+|     I have had an opportunity to ask questions about the study and I am satisfied with the answers I have received  | Valeur E  | Valeur F   |
+|     I understand that this study has been approved by a suitable Human Research Ethics Committee. I understand that the study is required to be carried out in line with the National Statement on Ethical Conduct in Human Research (2023)  | Valeur A  | Valeur |
+|     I understand I will receive a copy of this Information Statement and Consent Form | Valeur C  | Valeur D  |
 
 
 
