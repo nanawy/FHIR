@@ -269,8 +269,18 @@ Note: All parties signing the consent form must date their own signature.
 
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Link : https://www.hl7.org/fhir/resourcelist.html 
+
+- the ressources are divised in different manners : Categorized, Alphabetic, R2 Layout, ...... i'll work by Maturity(the more the number of level is high, the more if change occures in ressources, it doesn't have a lot of consequences on it) 
+- i'll create a board for each questions and the ressources and attributs it needed to, to create the form in the most complete way.
 
 
+
+| Colonne 1 | Colonne 2 | Colonne 3 |
+|-----------|-----------|-----------|
+| Ligne 1   | Valeur A  | Valeur B  |
+| Ligne 2   | Valeur C  | Valeur D  |
+| Ligne 3   | Valeur E  | Valeur F  |
 
 
 
