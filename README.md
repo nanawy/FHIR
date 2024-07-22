@@ -280,16 +280,16 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|------------|
 |  It is my choice for my child/person under my care to have genomic testing  | CanonicalResource  | url, status, version | provide url for the test, status (active,draft...), manage different versions|
 |  I [Parent/Guardian Name] , understand that my child's/ the person under my care's DNA will be tested by :   | Valeur C  | Valeur D  |
-|  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
-|  to look for changes in genes that may be associated with :   | Valeur E  | Valeur F  |
-|  [Condition or Clinical Indication]   | Valeur E  | Valeur F  |
-|  Genomic test results are based on current knowledge, which may change in the future  | Valeur A  | Valeur B  |
+|  [Panel] [Exome] [Genome]   | Observation | Valeur F  |
+|  to look for changes in genes that may be associated with :   | Observation  | Valeur F  |
+|  [Condition or Clinical Indication]   | Observation  | Valeur F  |
+|  Genomic test results are based on current knowledge, which may change in the future  | Observation  | Valeur B  |
 |  If I change my mind, I can choose not to be told about the result    | Valeur C  | Valeur D  |
-|  This test might find a cause for the condition(s)      | Valeur E  | Valeur F  |
-|  This test might not find a cause for the condition(s)   | Valeur E  | Valeur F  |
-|  This result might be of 'unknown significance', which means it cannot be understood today   | Valeur E  | Valeur F  |
-|  There is a chance that genomic testing could find other medical conditions (incidental findings)  | Valeur A  | Valeur B  |
-|  Genomic testing may show unexpected family relationships   | Valeur C  | Valeur D  |
+|  This test might find a cause for the condition(s)      | Observation  | Valeur F  |
+|  This test might not find a cause for the condition(s)   | Observation  | Valeur F  |
+|  This result might be of 'unknown significance', which means it cannot be understood today   | Observation  | Valeur F  |
+|  There is a chance that genomic testing could find other medical conditions (incidental findings)  | Observation| Valeur B  |
+|  Genomic testing may show unexpected family relationships   | Observation  | Valeur D  |
 |  Further tests or information sharing may be needed to finalize the result  | Binary  | Valeur F  |
 |  I will be told the results by a health professional   | Valeur E  | Valeur F  |
 |  Results may have implications for the health/genetic risks for the child/the person under my care and family members   | Valeur E  | Valeur F  |
@@ -298,7 +298,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |  The results will be available to health professionals involved in the care of my children/the person under my care      | Valeur E  | Valeur F  |
 |  Results are confidential and may not be release without my consent unless allowed by law   | Valeur E  | Valeur F  |
 |  The following individual can be given my child's / the person under my care's results if I am unable to be contacted  | Valeur E  | Valeur F  |
-| Contact Information :  Name , Number : Relationship to Patient  | Valeur E  | Valeur F  |
+| Contact Information :  Name , Number , Relationship to Patient  | Valeur E  | Valeur F  |
 
 
 
@@ -311,7 +311,9 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |                                                   Question for Section 2   : Consent for Data Sharing                                                                                                          | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
 |  I provide consent to share my child’s/ person under my care’s sample, genomic data, and related health information for   | Binary  | Valeur B  |
+|   | Observation | Valeur B  |
 |  Data is available for future general research use    | Binary | Valeur D  |
+|   | Observation | Valeur B  |
 |  Future is limited for health/medical/biomedical research | Valeur E  | Valeur F  |
 |  Future commercial use is prohibited   | Valeur E  | Valeur F  |
 |  Future use for methods research (analytic/software/technology development) outside the bounds of the other specified restrictions is prohibited   | Valeur E  | Valeur F   |
@@ -361,7 +363,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                                   Question for Section 4  :   Confirmation for Research Study                                                                                                         | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
-|     I have read the information statement about the study and I understand its contents   | Valeur A  | Valeur B  |
+|     I have read the information statement about the study and I understand its contents   | Location  |  name, address, hoursOfOperation, identifier, type, managingOrganization (reference)    |   location specific details    |
 |     I understand what my child and I have to do in this study     | Valeur C  | Valeur D  |
 |     I understand the risks my child could face because of their involvement in this study  | Valeur E  | Valeur F  |
 |     I voluntarily consent for myself and/or my child to take part in this research study   | Valeur E  | Valeur F  |
@@ -417,7 +419,7 @@ C- RECAP RESSOURCES
  |  Bundle     |   identifier, type, link, entry, signature    |    to group all consent forms, test results ... to a single bundle      |  
  |   CanonicalResource    |     url, version, status, description, publisher     |  provide unique identifiers, url for the form, identify different versions and statuses       |  
  |    Location    |    name, address, hoursOfOperation, identifier, type, managingOrganization (reference)    |   location specific details    |  
- |       |          |         |  
+ |  Observation      |  identifier,    triggeredBy,   status, subject, focus, issued,  note, hasMember,   | we can track multiple related consents(hasMember, triggeredBy) or the time when the observation is made(issued), ...      |  
  |       |        |       |  
  |       |          |         |  
  |       |        |       |  
