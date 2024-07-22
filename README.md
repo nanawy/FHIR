@@ -282,13 +282,8 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |  I [Parent/Guardian Name] , understand that my child's/ the person under my care's DNA will be tested by :   | Valeur C  | Valeur D  |
 |  [Panel] [Exome] [Genome]   | Valeur E  | Valeur F  |
 |  to look for changes in genes that may be associated with :   | Valeur E  | Valeur F  |
-| [Condition or Clinical Indication]   | Valeur E  | Valeur F  |
-
-
-
-
-|                                                   Question for Section 2                                                                                                             | Ressource FHIR  | Attributs / Description |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
+|  ### About the Test  |
+|  Genomic test results are based on current knowledge, which may change in the future  | Valeur A  | Valeur B  |
 |  Genomic test results are based on current knowledge, which may change in the future  | Valeur A  | Valeur B  |
 |  If I change my mind, I can choose not to be told about the result    | Valeur C  | Valeur D  |
 |  This test might find a cause for the condition(s)      | Valeur E  | Valeur F  |
@@ -306,6 +301,15 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |  The following individual can be given my child's / the person under my care's results if I am unable to be contacted  | Valeur E  | Valeur F  |
 | Contact Information :  Name , Number : Relationship to Patient  | Valeur E  | Valeur F  |
 
+
+
+|                                                   Question for Section 2                                                                                                             | Ressource FHIR  | Attributs / Description |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|
+|  Genomic test results are based on current knowledge, which may change in the future  | Valeur A  | Valeur B  |
+|  If I change my mind, I can choose not to be told about the result    | Valeur C  | Valeur D  |
+|  This test might find a cause for the condition(s)      | Valeur E  | Valeur F  |
+|  This test might not find a cause for the condition(s)   | Valeur E  | Valeur F  |
+|  This result might be of 'unknown significance', which means it cannot be understood today   | Valeur E  | Valeur F  
 
 
 
