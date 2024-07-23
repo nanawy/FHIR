@@ -279,8 +279,12 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |                                                   Question for Section 1   :   Genomic Testing Details                                                                                                         | Ressource FHIR  | Attributs  |Description|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|------------|
 |  It is my choice for my child/person under my care to have genomic testing  | CanonicalResource  | url, status, version | provide url for the test, status (active,draft...), manage different versions|
+|   | Patient  |  name,contact,telecom,address, gender| provide informations about the patient, birthDate |
+|   | RelatedPerson  | relationship, name,  birthDate, gender | to give informations about the child   | 
 |  I [Parent/Guardian Name] , understand that my child's/ the person under my care's DNA will be tested by :   | Valeur C  | Valeur D  |
 |  [Panel] [Exome] [Genome]   | Observation | Valeur F  |
+|    | Parameters |parameter,name, value  |   Parameters for the genomic testing operation   |
+|    | Parameters |parameter,name, value  |   Parameters for the genomic testing operation   |
 |  to look for changes in genes that may be associated with :   | Observation  | Valeur F  |
 |  [Condition or Clinical Indication]   | Observation  | Valeur F  |
 |  Genomic test results are based on current knowledge, which may change in the future  | Observation  | Valeur B  |
@@ -341,7 +345,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |                                                   Question for Section 3   :  Consent Summary                                                                                                         | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
 |   I have had enough time to consider the information in this consent form and have :    | CanonicalResource  | name, title  | provide identifiers for different consent summaries   |
-|     | |    |  | 
+|     | OperationDefinition |  description,  status, purpose |  | 
 |   Had the opportunity to discuss genomic testing and its implication with a health professional     | Valeur C  | Valeur D  |
 |   Been given access to information about genomic testing  | Valeur E  | Valeur F  |
 |   Been able to ask questions until I am satisfied with the answers   | Valeur E  | Valeur F  |
@@ -371,6 +375,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |     I have had an opportunity to ask questions about the study and I am satisfied with the answers I have received  | Valeur E  | Valeur F   |
 |     I understand that this study has been approved by a suitable Human Research Ethics Committee. I understand that the study is required to be carried out in line with the National Statement on Ethical Conduct in Human Research (2023)  | Valeur A  | Valeur |
 |     I understand I will receive a copy of this Information Statement and Consent Form | Binary  | ContentType , data     |   or to share genomic fils (as a binary file : pdf,..)  |
+| |  Practitioner      |  identifier,active,name,telecom, gender, birthDate, address,  communication, generalPractitioner,  managingOrganization,  link     |   information about the practitioner(maybe researcher) who will resend to them the form   |
 
 
 
@@ -402,6 +407,8 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |   I have explained the study to the parent(s)/guardian(s) who has signed above,...  | CanonicalResource | publisher  | to indicate the name of the researcher  |
 |        |    Location |  managingOrganization , address, name, hoursOfOperation | physical adress, the responsible of the site... |
 |   Research Team Member Name, Signature & Date |  Observation | performer, issued, note | we can add a signature with note |
+|    |  OperationDefinition | description, date,extension,contact,name | we can add a signature with extension |
+
 
 
 
@@ -424,18 +431,317 @@ C- RECAP RESSOURCES
  |  Observation      |  identifier,    triggeredBy,   status, subject, focus, issued,  note, hasMember,   | we can track multiple related consents(hasMember, triggeredBy) or the time when the observation is made(issued), ...      |  
  |  Observation    |   RelatedPerson  (  name, gender,  birthDate, address, communication )  |   typically have a personal relationship to the patient     |  
  |   OperationDefinition    |   contact,   extension ,  date, description,  status,  purpose, approvalDate |      for the signature(we better use extension),  Date when the research study was approved ( approvalDate) , but not necessarily important to implement  |  
- |       |        |       |  
- |       |          |         |  
- |       |        |       |  
- |       |          |         |  
- |       |        |       |  
- |       |          |         |  
- |       |        |       |  
- |       |          |         |  
- |       |        |       |  
- |       |          |         |  
+ |  OperationOutcome     |   issue,  severity, details,  diagnostics,location, expression,location |      to capture any erros (can be useful) |  
+ |   Organization    |   partOf,    identifier,  name, type, contact, qualification|      represent organizations involved in the consent process   |  
+ |    Parameters   |  parameter,   resource, name, value[x], part|  capture operation requests or responses within your consent form system, particularly for operations related to handling consent data      |  
+ |    Patient   |  identifier,name, telecom,address,birthDate, maritalStatus, contact (A contact party (e.g. guardian, partner, friend) for the patient),  communication(language)  |   informations about the patient      |  
+ |  Practitioner      |  identifier,active,name,telecom, gender, birthDate, address,  communication, generalPractitioner,  managingOrganization,  link     |   information about the practitioner    |  
+ |    Questionnaire   |  url, identifier, version, name, title, status, publisher, contact, description,  purpose, copyRight, item, linkId,     |     set of questions (in each sections)    |  
+ |  QuestionnaireResponse     |   identifier, questionnaire (the url), status, subject, author, item     |  represent the answers to a Questionnaire. Each response corresponds to a specific instance of a questionnaire being filled out  (in each sections)   |  
+ |   Resource    |   id, meta, implicitRules, language       |      the base structure for all FHIR resources   |  
+ |   StructureDefinition     |   element    |     helps in standardizing the structure of your consent forms, making them interoperable with other systems that use FHIR  |  
+ |ValueSet        |   url,identifier,version,name,title,status       |         |   
  |       |        |       |  
 
 
+ value set a mettre +++  dans le form (valeur de form genre genomic exome etc>>>)
 
+
+
+
+
+
+| RESSOURCES (level 4)             | ATTRIBUTS | WHY |
+|----------------------------------|-----------|-----|
+| ActivityDefinition               |           |     |
+
+| AuditEvent                       |           |     |
+
+| Composition                      |           |     |
+
+| Coverage                         |           |     |
+
+| CoverageEligibilityRequest       |           |     |
+
+| CoverageEligibilityResponse      |           |     |
+
+| DocumentReference                |           |     |
+
+| Encounter                        |           |     |
+
+| HealthcareService                |           |     |
+
+| ImagingStudy                     |           |     |
+
+| ImplementationGuide              |           |     |
+
+| Library                          |           |     |
+
+| List                             |           |     |
+
+| Measure                          |           |     |
+
+| MeasureReport                    |           |     |
+
+| Medication                       |           |     |
+
+| MedicationRequest                |           |     |
+
+| MedicationStatement              |           |     |
+
+| MessageHeader                    |           |     |
+
+| NamingSystem                     |           |     |
+
+| PaymentNotice                    |           |     |
+
+| PaymentReconciliation            |           |     |
+
+| Person                           |           |     |
+
+| PlanDefinition                   |           |     |
+
+| PractitionerRole                 |           |     |
+
+| Procedure                        |           |     |
+
+| Provenance                       |           |     |
+
+| RequestOrchestration             |           |     |
+
+| ServiceRequest                   |           |     |
+
+| StructureMap                     |           |     |
+
+| TestScript                       |           |     |
+
+
+
+| RESSOURCES (level 3)             | ATTRIBUTS | WHY |
+|----------------------------------|-----------|-----|
+| AllergyIntolerance               |           |     |
+
+| Appointment                      |           |     |
+
+| AppointmentResponse              |           |     |
+
+| Basic                            |           |     |
+
+| CompartmentDefinition            |           |     |
+
+| ConceptMap                       |           |     |
+
+| DiagnosticReport                 |           |     |
+
+| Group                            |           |     |
+
+| MedicinalProductDefinition       |           |     |
+
+| Schedule                         |           |     |
+
+| Slot                             |           |     |
+
+| Subscription                     |           |     |
+
+| Task                             |           |     |
+
+| VisionPrescription               |           |     |
+
+
+
+| RESSOURCES (level 2)             | ATTRIBUTS | WHY |
+|----------------------------------|-----------|-----|
+| Account                          |           |     |
+
+| AdministrableProductDefinition   |           |     |
+
+| AdverseEvent                     |           |     |
+
+| BiologicallyDerivedProduct       |           |     |
+
+| CarePlan                         |           |     |
+
+| CareTeam                         |           |     |
+
+| Claim                            |           |     |
+
+| ClaimResponse                    |           |     |
+
+| ClinicalUseDefinition            |           |     |
+
+| Communication                    |           |     |
+
+| CommunicationRequest             |           |     |
+
+| Consent                          |           |     |
+
+| DetectedIssue                    |           |     |
+
+| Device                           |           |     |
+
+| Endpoint                         |           |     |
+
+| EpisodeOfCare                    |           |     |
+
+| ExplanationOfBenefit             |           |     |
+
+| FamilyMemberHistory              |           |     |
+
+| Goal                             |           |     |
+
+| GraphDefinition                  |           |     |
+
+| GuidanceResponse                 |           |     |
+
+| Ingredient                       |           |     |
+
+| ManufacturedItemDefinition       |           |     |
+
+| MedicationAdministration          |           |     |
+
+| MedicationDispense               |           |     |
+
+| NutritionOrder                   |           |     |
+
+| PackagedProductDefinition        |           |     |
+
+| RegulatedAuthorization           |           |     |
+
+| RiskAssessment                   |           |     |
+
+| Specimen                         |           |     |
+
+| SubscriptionStatus               |           |     |
+
+| SubscriptionTopic                |           |     |
+
+| Substance                        |           |     |
+
+
+
+| RESSOURCES (level 1)             | ATTRIBUTS | WHY |
+|----------------------------------|-----------|-----|
+| ActorDefinition                  |           |     |
+
+| ArtifactAssessment               |           |     |
+
+| BodyStructure                    |           |     |
+
+| ChargeItem                       |           |     |
+
+| ChargeItemDefinition             |           |     |
+
+| Citation                         |           |     |
+
+| ClinicalImpression               |           |     |
+
+| Contract                         |           |     |
+
+| DeviceDefinition                 |           |     |
+
+| DeviceMetric                     |           |     |
+
+| DeviceRequest                    |           |     |
+
+| DeviceUsage                      |           |     |
+
+| Evidence                         |           |     |
+
+| EvidenceVariable                 |           |     |
+
+| ExampleScenario                  |           |     |
+
+| Flag                             |           |     |
+
+| ImagingSelection                 |           |     |
+
+| ImmunizationEvaluation           |           |     |
+
+| ImmunizationRecommendation       |           |     |
+
+| MedicationKnowledge              |           |     |
+
+| MessageDefinition                |           |     |
+
+| MolecularSequence                |           |     |
+
+| NutritionIntake                  |           |     |
+
+| NutritionProduct                 |           |     |
+
+| ObservationDefinition            |           |     |
+
+| OrganizationAffiliation          |           |     |
+
+| Requirements                     |           |     |
+
+| SpecimenDefinition               |           |     |
+
+| SubstanceDefinition              |           |     |
+
+| SupplyDelivery                   |           |     |
+
+| SupplyRequest                    |           |     |
+
+| TerminologyCapabilities          |           |     |
+
+| TestReport                       |           |     |
+
+| Transport                        |           |     |
+
+| VerificationResult               |           |     |
+
+
+
+| RESSOURCES (level 0)                         | ATTRIBUTS | WHY |
+|----------------------------------------------|-----------|-----|
+| BiologicallyDerivedProductDispense           |           |     |
+
+| ConditionDefinition                          |           |     |
+
+| DeviceAssociation                            |           |     |
+
+| DeviceDispense                               |           |     |
+
+| EncounterHistory                             |           |     |
+
+| EnrollmentRequest                            |           |     |
+
+| EnrollmentResponse                           |           |     |
+
+| EventDefinition                              |           |     |
+
+| EvidenceReport                               |           |     |
+
+| FormularyItem                                |           |     |
+
+| GenomicStudy                                 |           |     |
+
+| InsurancePlan                                |           |     |
+
+| InventoryItem                                |           |     |
+
+| InventoryReport                              |           |     |
+
+| Invoice                                      |           |     |
+
+| Linkage                                      |           |     |
+
+| Permission                                   |           |     |
+
+| ResearchStudy                                |           |     |
+
+| ResearchSubject                              |           |     |
+
+| SubstanceNucleicAcid                         |           |     |
+
+| SubstancePolymer                             |           |     |
+
+| SubstanceProtein                             |           |     |
+
+| SubstanceReferenceInformation                |           |     |
+
+| SubstanceSourceMaterial                      |           |     |
+
+| TestPlan                                     |           |     |
 
