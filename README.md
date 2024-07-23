@@ -453,22 +453,22 @@ C- RECAP RESSOURCES
 
 | RESSOURCES (level 4)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
-| ActivityDefinition               |           |     |
+| ActivityDefinition               |  url, identifier, version, name, status, description, action         |     |
 | AuditEvent                       |           |     |
 | Composition                      |           |     |
 | Coverage                         |           |     |
 | CoverageEligibilityRequest       |           |     |
 | CoverageEligibilityResponse      |           |     |
-| DocumentReference                |           |     |
+| DocumentReference                | identifier, status, type, subject, content, description          |  manage and reference documents related to consent or research   |
 | Encounter                        |           |     |
-| HealthcareService                |           |     |
+| HealthcareService                |    identifier, type, serviceType, location, organization       |     |
 | ImagingStudy                     |           |     |
 | ImplementationGuide              |           |     |
-| Library                          |           |     |
+| Library                          |           |  store reusable libraries of codes or data for consent management   |
 | List                             |           |     |
 | Measure                          |           |     |
 | MeasureReport                    |           |     |
-| Medication                       |           |     |
+| Medication                       | identifier, status, code, form, amount, ingredient          |  medications related to consent,   |
 | MedicationRequest                |           |     |
 | MedicationStatement              |           |     |
 | MessageHeader                    |           |     |
