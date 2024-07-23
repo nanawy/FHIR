@@ -552,69 +552,37 @@ C- RECAP RESSOURCES
 | RESSOURCES (level 2)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
 | Account                          |           |     |
-
 | AdministrableProductDefinition   |           |     |
-
 | AdverseEvent                     |           |     |
-
 | BiologicallyDerivedProduct       |           |     |
-
 | CarePlan                         |           |     |
-
 | CareTeam                         |           |     |
-
 | Claim                            |           |     |
-
 | ClaimResponse                    |           |     |
-
 | ClinicalUseDefinition            |           |     |
-
 | Communication                    |           |     |
-
 | CommunicationRequest             |           |     |
-
 | Consent                          |           |     |
-
 | DetectedIssue                    |           |     |
-
 | Device                           |           |     |
-
 | Endpoint                         |           |     |
-
 | EpisodeOfCare                    |           |     |
-
 | ExplanationOfBenefit             |           |     |
-
 | FamilyMemberHistory              |           |     |
-
 | Goal                             |           |     |
-
 | GraphDefinition                  |           |     |
-
 | GuidanceResponse                 |           |     |
-
-| Ingredient                       |           |     |
-
+|Ingredient                       |           |     |
 | ManufacturedItemDefinition       |           |     |
-
 | MedicationAdministration          |           |     |
-
 | MedicationDispense               |           |     |
-
 | NutritionOrder                   |           |     |
-
 | PackagedProductDefinition        |           |     |
-
 | RegulatedAuthorization           |           |     |
-
 | RiskAssessment                   |           |     |
-
 | Specimen                         |           |     |
-
 | SubscriptionStatus               |           |     |
-
 | SubscriptionTopic                |           |     |
-
 | Substance                        |           |     |
 
 
@@ -622,73 +590,39 @@ C- RECAP RESSOURCES
 | RESSOURCES (level 1)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
 | ActorDefinition                  |           |     |
-
 | ArtifactAssessment               |           |     |
-
 | BodyStructure                    |           |     |
-
 | ChargeItem                       |           |     |
-
 | ChargeItemDefinition             |           |     |
-
 | Citation                         |           |     |
-
 | ClinicalImpression               |           |     |
-
 | Contract                         |           |     |
-
 | DeviceDefinition                 |           |     |
-
 | DeviceMetric                     |           |     |
-
 | DeviceRequest                    |           |     |
-
 | DeviceUsage                      |           |     |
-
 | Evidence                         |           |     |
-
 | EvidenceVariable                 |           |     |
-
 | ExampleScenario                  |           |     |
-
 | Flag                             |           |     |
-
 | ImagingSelection                 |           |     |
-
 | ImmunizationEvaluation           |           |     |
-
 | ImmunizationRecommendation       |           |     |
-
 | MedicationKnowledge              |           |     |
-
 | MessageDefinition                |           |     |
-
 | MolecularSequence                |           |     |
-
 | NutritionIntake                  |           |     |
-
 | NutritionProduct                 |           |     |
-
 | ObservationDefinition            |           |     |
-
 | OrganizationAffiliation          |           |     |
-
 | Requirements                     |           |     |
-
 | SpecimenDefinition               |           |     |
-
 | SubstanceDefinition              |           |     |
-
 | SupplyDelivery                   |           |     |
-
 | SupplyRequest                    |           |     |
-
 | TerminologyCapabilities          |           |     |
-
 | TestReport                       |           |     |
-
 | Transport                        |           |     |
-
 | VerificationResult               |           |     |
 
 
@@ -696,52 +630,28 @@ C- RECAP RESSOURCES
 | RESSOURCES (level 0)                         | ATTRIBUTS | WHY |
 |----------------------------------------------|-----------|-----|
 | BiologicallyDerivedProductDispense           |           |     |
-
 | ConditionDefinition                          |           |     |
-
 | DeviceAssociation                            |           |     |
-
 | DeviceDispense                               |           |     |
-
 | EncounterHistory                             |           |     |
-
 | EnrollmentRequest                            |           |     |
-
 | EnrollmentResponse                           |           |     |
-
 | EventDefinition                              |           |     |
-
 | EvidenceReport                               |           |     |
-
 | FormularyItem                                |           |     |
-
 | GenomicStudy                                 |           |     |
-
 | InsurancePlan                                |           |     |
-
 | InventoryItem                                |           |     |
-
 | InventoryReport                              |           |     |
-
 | Invoice                                      |           |     |
-
 | Linkage                                      |           |     |
-
 | Permission                                   |           |     |
-
 | ResearchStudy                                |           |     |
-
 | ResearchSubject                              |           |     |
-
 | SubstanceNucleicAcid                         |           |     |
-
 | SubstancePolymer                             |           |     |
-
 | SubstanceProtein                             |           |     |
-
 | SubstanceReferenceInformation                |           |     |
-
 | SubstanceSourceMaterial                      |           |     |
-
 | TestPlan                                     |           |     |
 
