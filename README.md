@@ -341,6 +341,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |                                                   Question for Section 3   :  Consent Summary                                                                                                         | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
 |   I have had enough time to consider the information in this consent form and have :    | CanonicalResource  | name, title  | provide identifiers for different consent summaries   |
+|     | |    |  | 
 |   Had the opportunity to discuss genomic testing and its implication with a health professional     | Valeur C  | Valeur D  |
 |   Been given access to information about genomic testing  | Valeur E  | Valeur F  |
 |   Been able to ask questions until I am satisfied with the answers   | Valeur E  | Valeur F  |
@@ -387,6 +388,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |     Consent for future contact  | Observation | Valeur F  |
 |     Child’s Full name , co-signature (optional) & Date  | Observation  | Valeur F  |
 |     Parent / Guardian 1 & 2 ’s Full name , co-signature (optional) & Date  | Observation  | effectiveDateTime, performer,note,   |   |
+|     | OperationDefinition  | contact,   extension,  date, |  for signature (extension) |
 |    I would like to receive a summary of the study findings Y/N  | Binary  | Valeur F  |
 |     contact details  : email , phone number | Valeur E  | Valeur F   |
 
@@ -421,7 +423,7 @@ C- RECAP RESSOURCES
  |    Location    |    name, address, hoursOfOperation, identifier, type, managingOrganization (reference)    |   location specific details    |  
  |  Observation      |  identifier,    triggeredBy,   status, subject, focus, issued,  note, hasMember,   | we can track multiple related consents(hasMember, triggeredBy) or the time when the observation is made(issued), ...      |  
  |  Observation    |   RelatedPerson  (  name, gender,  birthDate, address, communication )  |   typically have a personal relationship to the patient     |  
- |   OperationDefinition    |   contact,   extension ,  date, description,  status,  purpose, approvalDate |      for the signature(we better use extension),    |  
+ |   OperationDefinition    |   contact,   extension ,  date, description,  status,  purpose, approvalDate |      for the signature(we better use extension),  Date when the research study was approved ( approvalDate) , but not necessarily important to implement  |  
  |       |        |       |  
  |       |          |         |  
  |       |        |       |  
