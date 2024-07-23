@@ -386,7 +386,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |     Consent for use of my child’s NBS card and diagnostic specimen | Observation | Valeur D  |
 |     Consent for future contact  | Observation | Valeur F  |
 |     Child’s Full name , co-signature (optional) & Date  | Observation  | Valeur F  |
-|     Parent / Guardian 1 & 2 ’s Full name , co-signature (optional) & Date  | Observation  | Valeur F   |   |
+|     Parent / Guardian 1 & 2 ’s Full name , co-signature (optional) & Date  | Observation  | effectiveDateTime, performer,note,   |   |
 |    I would like to receive a summary of the study findings Y/N  | Binary  | Valeur F  |
 |     contact details  : email , phone number | Valeur E  | Valeur F   |
 
@@ -399,7 +399,7 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
 |   I have explained the study to the parent(s)/guardian(s) who has signed above,...  | CanonicalResource | publisher  | to indicate the name of the researcher  |
 |        |    Location |  managingOrganization , address, name, hoursOfOperation | physical adress, the responsible of the site... |
-|   Research Team Member Name, Signature & Date |   | Valeur D  |
+|   Research Team Member Name, Signature & Date |  Observation | performer, issued, note | we can add a signature with note |
 
 
 
