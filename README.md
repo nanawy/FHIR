@@ -490,31 +490,18 @@ C- RECAP RESSOURCES
 | RESSOURCES (level 3)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
 | AllergyIntolerance               |           |     |
-
 | Appointment                      |           |     |
-
 | AppointmentResponse              |           |     |
-
 | Basic                            |           |     |
-
 | CompartmentDefinition            |           |     |
-
 | ConceptMap                       |           |     |
-
 | DiagnosticReport                 |           |     |
-
 | Group                            |           |     |
-
 | MedicinalProductDefinition       |           |     |
-
 | Schedule                         |           |     |
-
 | Slot                             |           |     |
-
 | Subscription                     |           |     |
-
 | Task                             |           |     |
-
 | VisionPrescription               |           |     |
 
 
