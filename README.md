@@ -420,8 +420,8 @@ C- RECAP RESSOURCES
  |   CanonicalResource    |     url, version, status, description, publisher     |  provide unique identifiers, url for the form, identify different versions and statuses       |  
  |    Location    |    name, address, hoursOfOperation, identifier, type, managingOrganization (reference)    |   location specific details    |  
  |  Observation      |  identifier,    triggeredBy,   status, subject, focus, issued,  note, hasMember,   | we can track multiple related consents(hasMember, triggeredBy) or the time when the observation is made(issued), ...      |  
- |       |        |       |  
- |       |          |         |  
+ |  Observation    |   RelatedPerson  (  name, gender,  birthDate, address, communication )  |   typically have a personal relationship to the patient     |  
+ |   OperationDefinition    |   contact,   extension ,  date, description,  status,  purpose, approvalDate |      for the signature(we better use extension),    |  
  |       |        |       |  
  |       |          |         |  
  |       |        |       |  
