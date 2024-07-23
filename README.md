@@ -454,65 +454,35 @@ C- RECAP RESSOURCES
 | RESSOURCES (level 4)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
 | ActivityDefinition               |           |     |
-
 | AuditEvent                       |           |     |
-
 | Composition                      |           |     |
-
 | Coverage                         |           |     |
-
 | CoverageEligibilityRequest       |           |     |
-
 | CoverageEligibilityResponse      |           |     |
-
 | DocumentReference                |           |     |
-
 | Encounter                        |           |     |
-
 | HealthcareService                |           |     |
-
 | ImagingStudy                     |           |     |
-
 | ImplementationGuide              |           |     |
-
 | Library                          |           |     |
-
 | List                             |           |     |
-
 | Measure                          |           |     |
-
 | MeasureReport                    |           |     |
-
 | Medication                       |           |     |
-
 | MedicationRequest                |           |     |
-
 | MedicationStatement              |           |     |
-
 | MessageHeader                    |           |     |
-
 | NamingSystem                     |           |     |
-
 | PaymentNotice                    |           |     |
-
 | PaymentReconciliation            |           |     |
-
 | Person                           |           |     |
-
 | PlanDefinition                   |           |     |
-
 | PractitionerRole                 |           |     |
-
 | Procedure                        |           |     |
-
 | Provenance                       |           |     |
-
 | RequestOrchestration             |           |     |
-
 | ServiceRequest                   |           |     |
-
 | StructureMap                     |           |     |
-
 | TestScript                       |           |     |
 
 
