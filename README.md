@@ -470,14 +470,14 @@ C- RECAP RESSOURCES
 | MeasureReport                    |           |     |
 | Medication                       | identifier, status, code, form, amount, ingredient          |  medications related to consent,   |
 | MedicationRequest                |           |     |
-| MedicationStatement              |           |     |
+| MedicationStatement              |   identifier, status, patient, medication, effectiveDate        |   track statements about medications taken by patients related to consent  |
 | MessageHeader                    |           |     |
 | NamingSystem                     |           |     |
 | PaymentNotice                    |           |     |
 | PaymentReconciliation            |           |     |
-| Person                           |           |     |
+| Person                           |identifier, name, gender, birthDate, address, contact           |  Manage information about individuals related to consent or research   |
 | PlanDefinition                   |           |     |
-| PractitionerRole                 |           |     |
+| PractitionerRole                 | identifier, status, role, practitioner, organization          |  Define the  role of practitioners involved in the consent process   |
 | Procedure                        |           |     |
 | Provenance                       |           |     |
 | RequestOrchestration             |           |     |
