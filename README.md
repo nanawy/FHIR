@@ -490,7 +490,7 @@ C- RECAP RESSOURCES
 | RESSOURCES (level 3)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
 | AllergyIntolerance               |     identifier, patient,code,reaction,criticality,onset      | take into account the allergies relevant to consent or research    |
-| Appointment                      |           |     |
+| Appointment                      |    identifier, status, type, patient, start, end, reason       |   track appointements to genetic testing for ex  |
 | AppointmentResponse              |           |     |
 | Basic                            |           |     |
 | CompartmentDefinition            |           |     |
