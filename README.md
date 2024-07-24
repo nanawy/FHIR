@@ -493,11 +493,11 @@ C- RECAP RESSOURCES
 | Appointment                      |    identifier, status, type, patient, start, end, reason       |   track appointements to genetic testing for ex  |
 | AppointmentResponse              |           |     |
 | Basic                            |           |     |
-| CompartmentDefinition            |           |     |
+| CompartmentDefinition            |     url, identifier, version, name, description, resource      | compartments for managing consent - related data    |
 | ConceptMap                       |           |     |
 | DiagnosticReport                 |           |     |
-| Group                            |           |     |
-| MedicinalProductDefinition       |           |     |
+| Group                            |   identifier, type, member, name, description        |  manage groups of individuals relevant to consent or research   |
+| MedicinalProductDefinition       |  identifier, status, form, ingredient, type         |  definition of medicinal products related to consent or research   |
 | Schedule                         |           |     |
 | Slot                             |           |     |
 | Subscription                     |           |     |
@@ -509,31 +509,31 @@ C- RECAP RESSOURCES
 | RESSOURCES (level 2)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
 | Account                          |           |     |
-| AdministrableProductDefinition   |           |     |
-| AdverseEvent                     |           |     |
+| AdministrableProductDefinition   | identifier, form,ingredient,type           |   define products related to the consent or research  |
+| AdverseEvent                     |      identifier, status, patient, code , outcome, description     | adverse events related to genetic testing or research    |
 | BiologicallyDerivedProduct       |           |     |
-| CarePlan                         |           |     |
+| CarePlan                         |   identifier, status, patient, goal, activity, description        |   we can define the care plans (including consent - related activities )  |
 | CareTeam                         |           |     |
 | Claim                            |           |     |
 | ClaimResponse                    |           |     |
 | ClinicalUseDefinition            |           |     |
 | Communication                    |           |     |
 | CommunicationRequest             |           |     |
-| Consent                          |           |     |
-| DetectedIssue                    |           |     |
+| Consent                          |    identifier, status, patient, scope, dateTime, provision       |     |
+| DetectedIssue                    |     identifier, status, patient, code, severity, detail      |   issues related to consent or research  |
 | Device                           |           |     |
 | Endpoint                         |           |     |
 | EpisodeOfCare                    |           |     |
 | ExplanationOfBenefit             |           |     |
-| FamilyMemberHistory              |           |     |
+| FamilyMemberHistory    +++          |  identifier, status, patient, relationship, condition         |  manage family history relevant to consent or genetic research   |
 | Goal                             |           |     |
 | GraphDefinition                  |           |     |
 | GuidanceResponse                 |           |     |
 |Ingredient                       |           |     |
 | ManufacturedItemDefinition       |           |     |
-| MedicationAdministration          |           |     |
-| MedicationDispense               |           |     |
-| NutritionOrder                   |           |     |
+| MedicationAdministration          | identifier, status, patient, medication, dosage          |    track medication administration related to research for ex  |
+| MedicationDispense               | identifier, status, patient, medication, quantity          |   manage medication dispensing related to consent or research   |
+| NutritionOrder                   |   identifier, status, patient, type, diet        | track nutrition orders relevant to consent or research    |
 | PackagedProductDefinition        |           |     |
 | RegulatedAuthorization           |           |     |
 | RiskAssessment                   |           |     |
