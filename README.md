@@ -537,37 +537,37 @@ C- RECAP RESSOURCES
 | PackagedProductDefinition        |           |     |
 | RegulatedAuthorization           |           |     |
 | RiskAssessment                   |           |     |
-| Specimen                         |           |     |
+| Specimen                         |     identifier, status, subject,type,collection, container      |    track specimens collected for genetic testing o research  |
 | SubscriptionStatus               |           |     |
 | SubscriptionTopic                |           |     |
-| Substance                        |           |     |
+| Substance                        | identifier, status, code, description, instance          |  to manage substances used in genetic testing o research    |
 
 
 
 | RESSOURCES (level 1)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
-| ActorDefinition                  |           |     |
+| ActorDefinition                  |     url, identifier, version, name, status, description      |  define actors involved in the consent process   |
 | ArtifactAssessment               |           |     |
-| BodyStructure                    |           |     |
-| ChargeItem                       |           |     |
-| ChargeItemDefinition             |           |     |
+| BodyStructure                    |  identifier, status, patient, location, description         |   body structures relevant to consent or research  |
+| ChargeItem                       |       identifier, status, code, patient, performer    |  charge items related to consent services   |
+| ChargeItemDefinition             |     url, identifier, version, name, status, code      |    define charge items and their usage in consent processes |
 | Citation                         |           |     |
 | ClinicalImpression               |           |     |
-| Contract                         |           |     |
+| Contract                         |   identifier, status, patient, subject, issued        | manage contracts related to consent or research agreements     |
 | DeviceDefinition                 |           |     |
 | DeviceMetric                     |           |     |
 | DeviceRequest                    |           |     |
 | DeviceUsage                      |           |     |
 | Evidence                         |           |     |
 | EvidenceVariable                 |           |     |
-| ExampleScenario                  |           |     |
-| Flag                             |           |     |
+| ExampleScenario                  |   url,identifier, version,name, status, actor, instance        | create example  scenarios for consent processes   |
+| Flag                             |       identifier, status, patient, code, period    |    flag important information relevant to consent or research |
 | ImagingSelection                 |           |     |
 | ImmunizationEvaluation           |           |     |
 | ImmunizationRecommendation       |           |     |
-| MedicationKnowledge              |           |     |
+| MedicationKnowledge              |     identifier, status, code, classification, doseForm      | manage knowledge about medications used in genetic testing or research     |
 | MessageDefinition                |           |     |
-| MolecularSequence                |           |     |
+| MolecularSequence                |     identifier, status, patient, coordinateSystem, sequence +++(could be intersting)  | manage molecular sequences related to genetic testing or research    |
 | NutritionIntake                  |           |     |
 | NutritionProduct                 |           |     |
 | ObservationDefinition            |           |     |
