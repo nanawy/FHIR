@@ -455,7 +455,7 @@ C- RECAP RESSOURCES
 |----------------------------------|-----------|-----|
 | ActivityDefinition               |  url, identifier, version, name, status, description, action         |     |
 | AuditEvent                       |           |     |
-| Composition                      |           |     |
+| Composition                      |  identifier, status, type, subject, date, section ++        | aggregate consent forms or related documents into a single composition    |
 | Coverage                         |           |     |
 | CoverageEligibilityRequest       |           |     |
 | CoverageEligibilityResponse      |           |     |
@@ -478,7 +478,7 @@ C- RECAP RESSOURCES
 | Person                           |identifier, name, gender, birthDate, address, contact           |  Manage information about individuals related to consent or research   |
 | PlanDefinition                   |           |     |
 | PractitionerRole                 | identifier, status, role, practitioner, organization          |  Define the  role of practitioners involved in the consent process   |
-| Procedure                        |           |     |
+| Procedure                        |     identifier, status, code, subject, performed, outcome      |   to manage procedures related to consent or genetic testing  |
 | Provenance                       |           |     |
 | RequestOrchestration             |           |     |
 | ServiceRequest                   |           |     |
@@ -489,7 +489,7 @@ C- RECAP RESSOURCES
 
 | RESSOURCES (level 3)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
-| AllergyIntolerance               |           |     |
+| AllergyIntolerance               |     identifier, patient,code,reaction,criticality,onset      | take into account the allergies relevant to consent or research    |
 | Appointment                      |           |     |
 | AppointmentResponse              |           |     |
 | Basic                            |           |     |
