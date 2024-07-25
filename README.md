@@ -570,45 +570,45 @@ C- RECAP RESSOURCES
 | MolecularSequence                |     identifier, status, patient, coordinateSystem, sequence +++(could be intersting)  | manage molecular sequences related to genetic testing or research    |
 | NutritionIntake                  |           |     |
 | NutritionProduct                 |           |     |
-| ObservationDefinition            |           |     |
-| OrganizationAffiliation          |           |     |
-| Requirements                     |           |     |
-| SpecimenDefinition               |           |     |
-| SubstanceDefinition              |           |     |
+| ObservationDefinition            |  url, identifier, version, name, status, description         |    define observations relevant to consent or research |
+| OrganizationAffiliation          |  identifier, status, organization, role, period         |   manage affiliations of organizations involved in consent processes  |
+| Requirements                     |  url , identifier , version , name , status, description         |  define requierments for consent or research activities   |
+| SpecimenDefinition               |  url, identifier, version, name, type, collection         |  define speciments relevant to genetic testing or consent   |
+| SubstanceDefinition              | url, identifier, version, name, type, collection | manage definitions of substances used in genetic testing or research     |
 | SupplyDelivery                   |           |     |
 | SupplyRequest                    |           |     |
 | TerminologyCapabilities          |           |     |
-| TestReport                       |           |     |
+| TestReport                       | identifier, status, name, result,           |   manage reports of test conducted on consent form implementations  |
 | Transport                        |           |     |
-| VerificationResult               |           |     |
+| VerificationResult               | identifier, status, target, validationType, frequency          |  Verify information relevant to consent or research   |
 
 
 
 | RESSOURCES (level 0)                         | ATTRIBUTS | WHY |
 |----------------------------------------------|-----------|-----|
 | BiologicallyDerivedProductDispense           |           |     |
-| ConditionDefinition                          |           |     |
+| ConditionDefinition                          | url, identifier, version, name, status, description         | Define conditions relevant to genetic testing or research |
 | DeviceAssociation                            |           |     |
 | DeviceDispense                               |           |     |
 | EncounterHistory                             |           |     |
-| EnrollmentRequest                            |           |     |
-| EnrollmentResponse                           |           |     |
-| EventDefinition                              |           |     |
-| EvidenceReport                               |           |     |
-| FormularyItem                                |           |     |
+| EnrollmentRequest                            |  identifier, status, patient, provider, coverage         |   Handle enrollment requests for consent or research studies  |
+| EnrollmentResponse                           | identifier, status, patient, outcome, request          |   Manage responses to enrollment requests related to consent  |
+| EventDefinition        | url, identifier, version, name, status, event  | Define events relevant to consent or research activities    |
+| EvidenceReport                               | url, identifier, version, name, status, description          | Manage reports of evidence related to consent or research    |
+| FormularyItem   |   url, identifier, version, name, status, drug        | Manage formulary items related to consent or research    |
 | GenomicStudy                                 |           |     |
-| InsurancePlan                                |           |     |
-| InventoryItem                                |           |     |
+| InsurancePlan   (why not?)  |  identifier, status, name, type, coverage, network     |  Manage insurance plans relevant to consent or research   |
+| InventoryItem               |           |     |
 | InventoryReport                              |           |     |
 | Invoice                                      |           |     |
-| Linkage                                      |           |     |
-| Permission                                   |           |     |
-| ResearchStudy                                |           |     |
-| ResearchSubject                              |           |     |
+| Linkage                                      | identifier, status, type, resource  | Manage linkages between related consent or research resources    |
+| Permission                                   | identifier, status, patient, policy, data          |Manage permissions relevant to consent or research data     |
+| ResearchStudy                                | identifier, status, title, sponsor, period          | Track research studies related to consent or genetic testing    |
+| ResearchSubject   |  identifier, status, study, individual, consent         | Manage subjects participating in research studies related to consent    |
 | SubstanceNucleicAcid                         |           |     |
 | SubstancePolymer                             |           |     |
 | SubstanceProtein                             |           |     |
-| SubstanceReferenceInformation                |           |     |
+| SubstanceReferenceInformation                |  identifier, status, gene, target, classification         | Manage reference information for substances used in research    |
 | SubstanceSourceMaterial                      |           |     |
-| TestPlan                                     |           |     |
+| TestPlan                                     |  identifier, status, name, description, testMethod         |  Manage test plans for validating consent form implementations   |
 
