@@ -1,8 +1,8 @@
-#Summary : 
+# Summary : 
 
 
 
-## Function print_question:
+### Function print_question:
 
 This feature displays a question and collects the user's response.
 It handles different types of questions: Boolean, multiple choice, textual, and grouped.
