@@ -290,20 +290,20 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |             |ValueSet        |   url,identifier,version,name,title,status       |     you just put the value like 'any condition'    | 
 |  Genomic test results are based on current knowledge, which may change in the future  | Observation  | code, valueCodeableConcept, category  |Record the target of the genomic test |
 |  If I change my mind, I can choose not to be told about the result    | consent  | provision  | details on how consent can be modified or withdrawn 
-| This test might find a cause for the condition(s)  | Observation  | Valeur F |
-|  This test might not find a cause for the condition(s)   | Observation  | Valeur F  |
-|  This result might be of 'unknown significance', which means it cannot be understood today   | Observation  | Valeur F  |
-|  There is a chance that genomic testing could find other medical conditions (incidental findings)  | Observation| Valeur B  |
-|  Genomic testing may show unexpected family relationships   | Observation  | Valeur D  |
-|  Further tests or information sharing may be needed to finalize the result  | Binary  | Valeur F  |
-|  I will be told the results by a health professional   | Valeur E  | Valeur F  |
-|  Results may have implications for the health/genetic risks for the child/the person under my care and family members   | Valeur E  | Valeur F  |
-|  Results can be used to inform counselling and testing of family members, though my child's/ the person under my care's identity will not be revealed to them | Valeur A  | Valeur B  |
-|  Results from these tests may affect my child's /the person under my care's ability to obtain some types of insurance    | Valeur C  | Valeur D  |
-|  The results will be available to health professionals involved in the care of my children/the person under my care      | Valeur E  | Valeur F  |
-|  Results are confidential and may not be release without my consent unless allowed by law   | Valeur E  | Valeur F  |
-|  The following individual can be given my child's / the person under my care's results if I am unable to be contacted  | Valeur E  | Valeur F  |
-| Contact Information :  Name , Number , Relationship to Patient  | Valeur E  | Valeur F  |
+| This test might find a cause for the condition(s)  | Observation  |  |
+|  This test might not find a cause for the condition(s)   | Observation  |  |
+|  This result might be of 'unknown significance', which means it cannot be understood today   | Observation  |   |
+|  There is a chance that genomic testing could find other medical conditions (incidental findings)  | Observation|  |
+|  Genomic testing may show unexpected family relationships   | Observation  |   |
+|  Further tests or information sharing may be needed to finalize the result  | Binary  |   |
+|  I will be told the results by a health professional   |  |  |
+|  Results may have implications for the health/genetic risks for the child/the person under my care and family members   |   |   |
+|  Results can be used to inform counselling and testing of family members, though my child's/ the person under my care's identity will not be revealed to them |   |   |
+|  Results from these tests may affect my child's /the person under my care's ability to obtain some types of insurance    |   |   |
+|  The results will be available to health professionals involved in the care of my children/the person under my care      |   |   |
+|  Results are confidential and may not be release without my consent unless allowed by law   |   |   |
+|  The following individual can be given my child's / the person under my care's results if I am unable to be contacted  |   |   |
+| Contact Information :  Name , Number , Relationship to Patient  |   |  |
 
 
 
@@ -315,19 +315,19 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                                   Question for Section 2   : Consent for Data Sharing                                                                                                          | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
-|  I provide consent to share my child’s/ person under my care’s sample, genomic data, and related health information for   | Binary  | Valeur B  |
-|   | Observation | Valeur B  |
-|  Data is available for future general research use    | Binary | Valeur D  |
-|   | Observation | Valeur B  |
-|  Future is limited for health/medical/biomedical research | Valeur E  | Valeur F  |
-|  Future commercial use is prohibited   | Valeur E  | Valeur F  |
-|  Future use for methods research (analytic/software/technology development) outside the bounds of the other specified restrictions is prohibited   | Valeur E  | Valeur F   |
-|   Future use of aggregate-level data for general research purposes is prohibited   | Valeur A  | Valeur B  |
-|  Future use as a control set for diseases other than those specified is prohibited    | Valeur C  | Valeur D  |
-|  Future use is limited to research involving a particular gender  | Valeur E  | Valeur F  |
-|  Future use is limited to pediatric research   | Valeur E  | Valeur F  |
-|  Future use is limited to research involving a specific population  | Valeur E  | Valeur F   |
-|  Future use is limited to data generated from samples collected after the following consent form date    | Valeur E  | Valeur F   |
+|  I provide consent to share my child’s/ person under my care’s sample, genomic data, and related health information for   | Binary  |   |
+|   | Observation |  |
+|  Data is available for future general research use    | Binary |  |
+|   | Observation |  |
+|  Future is limited for health/medical/biomedical research |  |   |
+|  Future commercial use is prohibited   |  |   |
+|  Future use for methods research (analytic/software/technology development) outside the bounds of the other specified restrictions is prohibited   |  |
+|   Future use of aggregate-level data for general research purposes is prohibited   | | |
+|  Future use as a control set for diseases other than those specified is prohibited    |   |   |
+|  Future use is limited to research involving a particular gender  |  |   |
+|  Future use is limited to pediatric research   |  |   |
+|  Future use is limited to research involving a specific population  |   |    |
+|  Future use is limited to data generated from samples collected after the following consent form date    | |    |
 
 
 
@@ -347,17 +347,17 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
 |   I have had enough time to consider the information in this consent form and have :    | CanonicalResource  | name, title  | provide identifiers for different consent summaries   |
 |     | OperationDefinition |  description,  status, purpose |  | 
-|   Had the opportunity to discuss genomic testing and its implication with a health professional     | Valeur C  | Valeur D  |
-|   Been given access to information about genomic testing  | Valeur E  | Valeur F  |
-|   Been able to ask questions until I am satisfied with the answers   | Valeur E  | Valeur F  |
-|   Been offered a copy of this consent form   | Binary  | Valeur F   |
-|   I provide consent to have genomic testing as summarized in these forms   | Valeur C  | Valeur D  |
-|  Child’s name  | Valeur E  | Valeur F  |
-|  Date of Birth   | Valeur E  | Valeur F  |
-|  Print Parent/ Guardian’s Name :  | Valeur E  | Valeur F   |
-|  Email/ Address :     | Valeur E  | Valeur F   |
-|  Health Professional AHPRA ID  | Valeur E  | Valeur F  |
-|  Health Professional Name   | Valeur E  | Valeur F  |
+|   Had the opportunity to discuss genomic testing and its implication with a health professional     |  |  |
+|   Been given access to information about genomic testing  |  |  |
+|   Been able to ask questions until I am satisfied with the answers   |   |   |
+|   Been offered a copy of this consent form   | Binary  |   |
+|   I provide consent to have genomic testing as summarized in these forms   |   |   |
+|  Child’s name  |   |  |
+|  Date of Birth   |   |   |
+|  Print Parent/ Guardian’s Name :  |   |    |
+|  Email/ Address :     |   |    |
+|  Health Professional AHPRA ID  |   |   |
+|  Health Professional Name   |   |   |
 
 
 
@@ -370,11 +370,11 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 |                                                   Question for Section 4  :   Confirmation for Research Study                                                                                                         | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
 |     I have read the information statement about the study and I understand its contents   | Location  |  name, address, hoursOfOperation, identifier, type, managingOrganization (reference)    |   location specific details    |
-|     I understand what my child and I have to do in this study     | Valeur C  | Valeur D  |
-|     I understand the risks my child could face because of their involvement in this study  | Valeur E  | Valeur F  |
-|     I voluntarily consent for myself and/or my child to take part in this research study   | Valeur E  | Valeur F  |
-|     I have had an opportunity to ask questions about the study and I am satisfied with the answers I have received  | Valeur E  | Valeur F   |
-|     I understand that this study has been approved by a suitable Human Research Ethics Committee. I understand that the study is required to be carried out in line with the National Statement on Ethical Conduct in Human Research (2023)  | Valeur A  | Valeur |
+|     I understand what my child and I have to do in this study     |   |   |
+|     I understand the risks my child could face because of their involvement in this study  |   |   |
+|     I voluntarily consent for myself and/or my child to take part in this research study   |   |   |
+|     I have had an opportunity to ask questions about the study and I am satisfied with the answers I have received  |   |    |
+|     I understand that this study has been approved by a suitable Human Research Ethics Committee. I understand that the study is required to be carried out in line with the National Statement on Ethical Conduct in Human Research (2023)  |   |  |
 |     I understand I will receive a copy of this Information Statement and Consent Form | Binary  | ContentType , data     |   or to share genomic fils (as a binary file : pdf,..)  |
 | |  Practitioner      |  identifier,active,name,telecom, gender, birthDate, address,  communication, generalPractitioner,  managingOrganization,  link     |   information about the practitioner(maybe researcher) who will resend to them the form   |
 
@@ -389,14 +389,14 @@ Link : https://www.hl7.org/fhir/resourcelist.html
 
 |                                            Question for Section 5 :         Genomic Testing Consent                                                                                            | Ressource FHIR  | Attributs  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-------------------------|----------|
-|    Please choose from the following options : I consent, I do not consent  | Valeur A  | Valeur B  |
-|     Consent for use of my child’s NBS card and diagnostic specimen | Observation | Valeur D  |
-|     Consent for future contact  | Observation | Valeur F  |
-|     Child’s Full name , co-signature (optional) & Date  | Observation  | Valeur F  |
+|    Please choose from the following options : I consent, I do not consent  |  |   |
+|     Consent for use of my child’s NBS card and diagnostic specimen | Observation |   |
+|     Consent for future contact  | Observation | |
+|     Child’s Full name , co-signature (optional) & Date  | Observation  |   |
 |     Parent / Guardian 1 & 2 ’s Full name , co-signature (optional) & Date  | Observation  | effectiveDateTime, performer,note,   |   |
 |     | OperationDefinition  | contact,   extension,  date, |  for signature (extension) |
-|    I would like to receive a summary of the study findings Y/N  | Binary  | Valeur F  |
-|     contact details  : email , phone number | Valeur E  | Valeur F   |
+|    I would like to receive a summary of the study findings Y/N  | Binary  |   |
+|     contact details  : email , phone number | | |
 
 
 
@@ -445,7 +445,6 @@ C- RECAP RESSOURCES
  |       |        |       |  
 
 
- value set a mettre +++  dans le form (valeur de form genre genomic exome etc>>>)
 
 
 
@@ -455,36 +454,16 @@ C- RECAP RESSOURCES
 | RESSOURCES (level 4)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
 | ActivityDefinition               |  url, identifier, version, name, status, description, action         |     |
-| AuditEvent                       |           |     |
 | Composition                      |  identifier, status, type, subject, date, section ++        | aggregate consent forms or related documents into a single composition    |
-| Coverage                         |           |     |
-| CoverageEligibilityRequest       |           |     |
-| CoverageEligibilityResponse      |           |     |
 | DocumentReference                | identifier, status, type, subject, content, description          |  manage and reference documents related to consent or research   |
-| Encounter                        |           |     |
 | HealthcareService                |    identifier, type, serviceType, location, organization       |     |
-| ImagingStudy                     |           |     |
-| ImplementationGuide              |           |     |
 | Library                          |           |  store reusable libraries of codes or data for consent management   |
-| List                             |           |     |
-| Measure                          |           |     |
-| MeasureReport                    |           |     |
 | Medication                       | identifier, status, code, form, amount, ingredient          |  medications related to consent,   |
-| MedicationRequest                |           |     |
 | MedicationStatement              |   identifier, status, patient, medication, effectiveDate        |   track statements about medications taken by patients related to consent  |
-| MessageHeader                    |           |     |
-| NamingSystem                     |           |     |
-| PaymentNotice                    |           |     |
-| PaymentReconciliation            |           |     |
 | Person                           |identifier, name, gender, birthDate, address, contact           |  Manage information about individuals related to consent or research   |
-| PlanDefinition                   |           |     |
 | PractitionerRole                 | identifier, status, role, practitioner, organization          |  Define the  role of practitioners involved in the consent process   |
 | Procedure                        |     identifier, status, code, subject, performed, outcome      |   to manage procedures related to consent or genetic testing  |
-| Provenance                       |           |     |
-| RequestOrchestration             |           |     |
-| ServiceRequest                   |           |     |
-| StructureMap                     |           |     |
-| TestScript                       |           |     |
+
 
 
 
@@ -492,18 +471,9 @@ C- RECAP RESSOURCES
 |----------------------------------|-----------|-----|
 | AllergyIntolerance               |     identifier, patient,code,reaction,criticality,onset      | take into account the allergies relevant to consent or research    |
 | Appointment                      |    identifier, status, type, patient, start, end, reason       |   track appointements to genetic testing for ex  |
-| AppointmentResponse              |           |     |
-| Basic                            |           |     |
 | CompartmentDefinition            |     url, identifier, version, name, description, resource      | compartments for managing consent - related data    |
-| ConceptMap                       |           |     |
-| DiagnosticReport                 |           |     |
 | Group                            |   identifier, type, member, name, description        |  manage groups of individuals relevant to consent or research   |
 | MedicinalProductDefinition       |  identifier, status, form, ingredient, type         |  definition of medicinal products related to consent or research   |
-| Schedule                         |           |     |
-| Slot                             |           |     |
-| Subscription                     |           |     |
-| Task                             |           |     |
-| VisionPrescription               |           |     |
 
 
 
@@ -512,35 +482,14 @@ C- RECAP RESSOURCES
 | Account                          |           |     |
 | AdministrableProductDefinition   | identifier, form,ingredient,type           |   define products related to the consent or research  |
 | AdverseEvent                     |      identifier, status, patient, code , outcome, description     | adverse events related to genetic testing or research    |
-| BiologicallyDerivedProduct       |           |     |
 | CarePlan                         |   identifier, status, patient, goal, activity, description        |   we can define the care plans (including consent - related activities )  |
-| CareTeam                         |           |     |
-| Claim                            |           |     |
-| ClaimResponse                    |           |     |
-| ClinicalUseDefinition            |           |     |
-| Communication                    |           |     |
-| CommunicationRequest             |           |     |
 | Consent                          |    identifier, status, patient, scope, dateTime, provision       |     |
 | DetectedIssue                    |     identifier, status, patient, code, severity, detail      |   issues related to consent or research  |
-| Device                           |           |     |
-| Endpoint                         |           |     |
-| EpisodeOfCare                    |           |     |
-| ExplanationOfBenefit             |           |     |
 | FamilyMemberHistory    +++          |  identifier, status, patient, relationship, condition         |  manage family history relevant to consent or genetic research   |
-| Goal                             |           |     |
-| GraphDefinition                  |           |     |
-| GuidanceResponse                 |           |     |
-|Ingredient                       |           |     |
-| ManufacturedItemDefinition       |           |     |
 | MedicationAdministration          | identifier, status, patient, medication, dosage          |    track medication administration related to research for ex  |
 | MedicationDispense               | identifier, status, patient, medication, quantity          |   manage medication dispensing related to consent or research   |
 | NutritionOrder                   |   identifier, status, patient, type, diet        | track nutrition orders relevant to consent or research    |
-| PackagedProductDefinition        |           |     |
-| RegulatedAuthorization           |           |     |
-| RiskAssessment                   |           |     |
 | Specimen                         |     identifier, status, subject,type,collection, container      |    track specimens collected for genetic testing o research  |
-| SubscriptionStatus               |           |     |
-| SubscriptionTopic                |           |     |
 | Substance                        | identifier, status, code, description, instance          |  to manage substances used in genetic testing o research    |
 
 
@@ -548,50 +497,27 @@ C- RECAP RESSOURCES
 | RESSOURCES (level 1)             | ATTRIBUTS | WHY |
 |----------------------------------|-----------|-----|
 | ActorDefinition                  |     url, identifier, version, name, status, description      |  define actors involved in the consent process   |
-| ArtifactAssessment               |           |     |
 | BodyStructure                    |  identifier, status, patient, location, description         |   body structures relevant to consent or research  |
 | ChargeItem                       |       identifier, status, code, patient, performer    |  charge items related to consent services   |
 | ChargeItemDefinition             |     url, identifier, version, name, status, code      |    define charge items and their usage in consent processes |
-| Citation                         |           |     |
-| ClinicalImpression               |           |     |
 | Contract                         |   identifier, status, patient, subject, issued        | manage contracts related to consent or research agreements     |
-| DeviceDefinition                 |           |     |
-| DeviceMetric                     |           |     |
-| DeviceRequest                    |           |     |
-| DeviceUsage                      |           |     |
-| Evidence                         |           |     |
-| EvidenceVariable                 |           |     |
 | ExampleScenario                  |   url,identifier, version,name, status, actor, instance        | create example  scenarios for consent processes   |
 | Flag                             |       identifier, status, patient, code, period    |    flag important information relevant to consent or research |
-| ImagingSelection                 |           |     |
-| ImmunizationEvaluation           |           |     |
-| ImmunizationRecommendation       |           |     |
 | MedicationKnowledge              |     identifier, status, code, classification, doseForm      | manage knowledge about medications used in genetic testing or research     |
-| MessageDefinition                |           |     |
 | MolecularSequence                |     identifier, status, patient, coordinateSystem, sequence +++(could be intersting)  | manage molecular sequences related to genetic testing or research    |
-| NutritionIntake                  |           |     |
-| NutritionProduct                 |           |     |
 | ObservationDefinition            |  url, identifier, version, name, status, description         |    define observations relevant to consent or research |
 | OrganizationAffiliation          |  identifier, status, organization, role, period         |   manage affiliations of organizations involved in consent processes  |
 | Requirements                     |  url , identifier , version , name , status, description         |  define requierments for consent or research activities   |
 | SpecimenDefinition               |  url, identifier, version, name, type, collection         |  define speciments relevant to genetic testing or consent   |
 | SubstanceDefinition              | url, identifier, version, name, type, collection | manage definitions of substances used in genetic testing or research     |
-| SupplyDelivery                   |           |     |
-| SupplyRequest                    |           |     |
-| TerminologyCapabilities          |           |     |
 | TestReport                       | identifier, status, name, result,           |   manage reports of test conducted on consent form implementations  |
-| Transport                        |           |     |
 | VerificationResult               | identifier, status, target, validationType, frequency          |  Verify information relevant to consent or research   |
 
 
 
 | RESSOURCES (level 0)                         | ATTRIBUTS | WHY |
 |----------------------------------------------|-----------|-----|
-| BiologicallyDerivedProductDispense           |           |     |
 | ConditionDefinition                          | url, identifier, version, name, status, description         | Define conditions relevant to genetic testing or research |
-| DeviceAssociation                            |           |     |
-| DeviceDispense                               |           |     |
-| EncounterHistory                             |           |     |
 | EnrollmentRequest                            |  identifier, status, patient, provider, coverage         |   Handle enrollment requests for consent or research studies  |
 | EnrollmentResponse                           | identifier, status, patient, outcome, request          |   Manage responses to enrollment requests related to consent  |
 | EventDefinition        | url, identifier, version, name, status, event  | Define events relevant to consent or research activities    |
@@ -600,16 +526,10 @@ C- RECAP RESSOURCES
 | GenomicStudy                                 |           |     |
 | InsurancePlan   (why not?)  |  identifier, status, name, type, coverage, network     |  Manage insurance plans relevant to consent or research   |
 | InventoryItem               |           |     |
-| InventoryReport                              |           |     |
-| Invoice                                      |           |     |
 | Linkage                                      | identifier, status, type, resource  | Manage linkages between related consent or research resources    |
 | Permission                                   | identifier, status, patient, policy, data          |Manage permissions relevant to consent or research data     |
 | ResearchStudy                                | identifier, status, title, sponsor, period          | Track research studies related to consent or genetic testing    |
 | ResearchSubject   |  identifier, status, study, individual, consent         | Manage subjects participating in research studies related to consent    |
-| SubstanceNucleicAcid                         |           |     |
-| SubstancePolymer                             |           |     |
-| SubstanceProtein                             |           |     |
 | SubstanceReferenceInformation                |  identifier, status, gene, target, classification         | Manage reference information for substances used in research    |
-| SubstanceSourceMaterial                      |           |     |
 | TestPlan                                     |  identifier, status, name, description, testMethod         |  Manage test plans for validating consent form implementations   |
 
