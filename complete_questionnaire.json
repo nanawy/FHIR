@@ -1,0 +1,51 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "2b76f5da400249b3",
+    "url": "http://example.org/Questionnaire/genomic-testing-details",
+    "status": "active",
+    "version": "1.0",
+    "name": "GenomicTestingDetails",
+    "title": "Genomic Testing Details",
+    "date": "2024-07-24",
+    "publisher": "Health Service",
+    "item": [
+        {
+            "linkId": "1",
+            "text": "It is my choice for my child/person under my care to have genomic testing.",
+            "type": "boolean"
+        },
+        {
+            "linkId": "2",
+            "text": "[Parent/Guardian Name]",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "2.1",
+                    "text": "Family Name",
+                    "type": "string"
+                },
+                {
+                    "linkId": "2.2",
+                    "text": "Given Name",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "linkId": "3",
+            "text": "I understand that my child's/ the person under my care's DNA will be tested by:",
+            "type": "choice",
+            "answerOption": [
+                {
+                    "valueString": "Panel"
+                },
+                {
+                    "valueString": "Exome"
+                },
+                {
+                    "valueString": "Genome"
+                }
+            ]
+        }
+    ]
+}
