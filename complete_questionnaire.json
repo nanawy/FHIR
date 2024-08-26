@@ -46,6 +46,261 @@
                     "valueString": "Genome"
                 }
             ]
+        },
+        {
+            "linkId": "4",
+            "text": "I provide consent to share my child's / person under my care's sample, genomic data, and related health information for : ",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "4.1",
+                    "text": "General research use",
+                    "type": "boolean", 
+                    "extension": [
+                {
+                          "url": "http://example.org/fhir/StructureDefinition/duo-code",
+                          "valueCoding": {
+                            "system": "http://purl.obolibrary.org/obo/duo.owl",
+                            "code": "GRU",
+                            "display": "General Research Use"
+                          }
+                        }
+                      ]
+
+                },
+                {
+                    "linkId": "4.2",
+                    "text": " Health/medical/biomedical research",
+                    "type": "boolean",
+                    "extension": [
+                        {
+                          "url": "http://example.org/fhir/StructureDefinition/duo-code",
+                          "valueCoding": {
+                            "system": "http://purl.obolibrary.org/obo/duo.owl",
+                            "code": "HMB",
+                            "display": "Health/Medical/Biomedical Research"
+                          }
+                        }
+                    ]
+
+                },
+                {
+                    "linkId": "4.3",
+                    "text": "For research involving the following area",
+                    "type": "string",
+                    "extension": [
+                        {
+                          "url": "http://example.org/fhir/StructureDefinition/duo-code",
+                          "valueCoding": {
+                            "system": "http://purl.obolibrary.org/obo/duo.owl",
+                            "code": "NCTRL",
+                            "display": "Research Specific - Controlled"
+                          }
+                        }
+                    ]
+                
+
+                },
+                {
+                    "linkId": "4.4",
+                    "text": "Future use is limited to research involving a particular gender",
+                    "type": "boolean"
+
+                },
+                {
+                    "linkId": "4.5",
+                    "text": "If future use is limited to a particular gender, specify the gender",
+                    "type": "choice",
+                    "enableWhen": [
+                        {
+                            "question": "4.4",
+                            "operator": "=",
+                            "answerBoolean": true
+                        }
+                    ],
+                    "answerOption": [
+                        {
+                            "valueString": "Male",
+                             "extension": [
+                {
+                  "url": "http://example.org/fhir/StructureDefinition/duo-code",
+                  "valueCoding": {
+                    "system": "http://purl.obolibrary.org/obo/duo.owl",
+                    "code": "RS_M",
+                    "display": "Research Specific - Male"
+                  }
+                }
+              ]
+
+
+                        },
+                        {
+                            "valueString": "Female",
+                            "extension": [
+                                {
+                                  "url": "http://example.org/fhir/StructureDefinition/duo-code",
+                                  "valueCoding": {
+                                    "system": "http://purl.obolibrary.org/obo/duo.owl",
+                                    "code": "RS_F",
+                                    "display": "Research Specific - Female"
+                                  }
+                                }
+                              ]
+
+
+                        },
+                        {
+                            "valueString": "Other",
+                            "extension": [
+
+                            {
+                                "url": "http://example.org/fhir/StructureDefinition/duo-code",
+                                "valueCoding": {
+                                  "system": "http://purl.obolibrary.org/obo/duo.owl",
+                                  "code": "RS_G",
+                                  "display": "Research Specific - Other"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6",
+                    "text": "Future use is limited to pediatric research",
+                    "type": "boolean",
+                     "extension": [
+            {
+              "url": "http://example.org/fhir/StructureDefinition/duo-code",
+              "valueCoding": {
+                "system": "http://purl.obolibrary.org/obo/duo.owl",
+                "code": "RS_PD",
+                "display": "Research Specific - Pediatric"
+              }
+            }
+          ]
+
+
+                },
+                {
+                    "linkId": "4.7",
+                    "text": "Future use is limited to research involving a specific population",
+                    "type": "boolean", 
+                      "extension": [
+            {
+              "url": "http://example.org/fhir/StructureDefinition/duo-code",
+              "valueCoding": {
+                "system": "http://purl.obolibrary.org/obo/duo.owl",
+                "code": "RS_POP",
+                "display": "Research Specific - Population"
+              }
+            }
+          ]  
+
+
+                },
+                {
+                    "linkId": "4.8",
+                    "text": "If future use is limited to a specific population, specify the population",
+                    "type": "string",
+                    "enableWhen": [
+                        {
+                            "question": "4.7",
+                            "operator": "=",
+                            "answerBoolean": true
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.9",
+                    "text": "Future use is limited to data generated from sample collected after the following consent form date",
+                    "type": "boolean"
+                },
+                {
+                    "linkId": "4.10",
+                    "text": "If future use is limited by consent form date, specify the date",
+                    "type": "date",
+                    "enableWhen": [
+                        {
+                            "question": "4.9",
+                            "operator": "=",
+                            "answerBoolean": true
+                        }
+                    ]
+                },
+           
+           
+        {
+            "linkId": "5",
+            "text": "I have had enough time to consider the information in this consent form and have:",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "5.1",
+                    "text": "had the opportunity to discuss genomic testing and its implication with a health professional",
+                    "type": "boolean"
+                },
+                {
+                    "linkId": "5.2",
+                    "text": "Been given access to information about genomic testing",
+                    "type": "boolean"
+                },
+                {
+                    "linkId": "5.3",
+                    "text": "Been able to ask questions until I am satisfied with the answers",
+                    "type": "string"
+                },
+                {
+                    "linkId": "5.4",
+                    "text": "Been offered a copy of this consent form",
+                    "type": "boolean"
+                }
+            ]
+        },
+        {
+            "linkId": "6",
+            "text": "For the research study, I confirm that:",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "6.1",
+                    "text": "I've read this information statement and I understand in contents",
+                    "type": "boolean"
+                },
+                {
+                    "linkId": "6.2",
+                    "text": "I understand what my child and I have to do in the study",
+                    "type": "boolean"
+                },
+                {
+                    "linkId": "6.3",
+                    "text": "I understand the risks my child could face because of their involvement in this study",
+                    "type": "boolean"
+                },
+                {
+                    "linkId": "6.4",
+                    "text": "I voluntarily consent for myself and/or my child to take point in this study",
+                    "type": "boolean"
+                },
+                {
+                    "linkId": "6.5",
+                    "text": "I've had an opportunity to ask questions about the study and I'm satisfied with the answers I've received",
+                    "type": "boolean"
+                },
+                {
+                    "linkId": "6.6",
+                    "text": "I understand that this study has been approved by a suitable human research",
+                    "type": "boolean"
+                },
+                {
+                    "linkId": "6.7",
+                    "text": "I understand I'll receive a copy of this information statement and consent form",
+                    "type": "boolean"
+                }
+            ]
         }
     ]
 }
