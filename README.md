@@ -1,6 +1,4 @@
 
-- je dois rajouter plus de details avec le code (finir jeudi matin) 
-
 # PROJECT 
 
 This work is part of the Gene Guardian project, previously named Dynamic Consent
