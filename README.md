@@ -87,20 +87,20 @@ note :
 
  - we create the questionnaire response resource.
  - by using an add_item() function , we take the answers of each item that has been give by answering the questionnaire.
-   
+ NB :  
    
 5. <mark> def create_patient_resource(patient_email, unique_id, questionnaire_response, questionnaire_response_id, practitioner_id, birth_date, practitioner_name):  <mark>
 
 - we create the patient resource.
 - we add an extension to add the reference of the questionnaireResponse's resource.
 
-
+NB :
 
 6. <mark> def create_practitioner_resource(practitioner_id, practitioner_name)  <mark>
 
 - we create the practitioner resource.
 - it contains the name and the ID of the practitioner.
-
+NB :
 
 7. <mark> def save_to_file(data, filename)    <mark>
 
@@ -122,18 +122,20 @@ note :
 
 - We create the consent resource. 
 
+NB :
     
 12. <mark> def create_consent_provision(response, duo_mapping, server_practitioner_id) /// def integrate_provision(consent, questionnaire_response, duo_mapping, server_practitioner_id)  <mark>
 
 - We create the provision , and then we add it in the data.provision.consent as extensions.
 
+NB :
 
     
 14. <mark>  def create_consent_resource_withprovision(unique_id, server_practitioner_id, questionnaire_response,duo_mapping ) <mark> :
 
 -  I modify the function create_consent_resource by adding a boucle ‘for’ , to add the duo_codes in the provision.consent attributes.
     
-
+NB : 
 
 
 
