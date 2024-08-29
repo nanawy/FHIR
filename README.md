@@ -1,5 +1,5 @@
 
-# PROJECT 
+## PROJECT 
 
 This work is part of the Gene Guardian project, previously named Dynamic Consent
 Protocol, which suggests a perfect framework that puts the individual in the middle of
@@ -17,7 +17,7 @@ figure 1 : diagram of the medical application :
 ![image](https://github.com/user-attachments/assets/4da8674e-5d39-4aa0-b89d-244d0da2569c)
 
 
-# FHIR 
+## FHIR 
 
 my role is : Create a form using FHIR resources (& adapting it to our needs)
 This form is a mixture of forms of hospitals and a form already created by the team
@@ -120,31 +120,34 @@ note :
 
 10. <mark>  def create_consent_resource(unique_id, server_practitioner_id, responses, duo_codes) <mark>
 
+- We create the consent resource. 
+
+    
+12. <mark> def create_consent_provision(response, duo_mapping, server_practitioner_id) /// def integrate_provision(consent, questionnaire_response, duo_mapping, server_practitioner_id)  <mark>
+
+- We create the provision , and then we add it in the data.provision.consent as extensions.
 
 
     
-12. <mark> def create_consent_provision(response, duo_mapping, server_practitioner_id) , def integrate_provision(consent, questionnaire_response, duo_mapping, server_practitioner_id)  <mark>
+14. <mark>  def create_consent_resource_withprovision(unique_id, server_practitioner_id, questionnaire_response,duo_mapping ) <mark> :
 
-
-
-
+-  I modify the function create_consent_resource by adding a boucle ‘for’ , to add the duo_codes in the provision.consent attributes.
     
-14. <mark>  def create_consent_resource_withprovision(unique_id, server_practitioner_id, questionnaire_response,duo_mapping ) <mark>
-    
+
 
 
 
 
 If I had time, I would make these changes : 
 
-Create an Organization Resource, to add it in our Consent Resource with the server ID.
+- Create an Organization Resource, to add it in our Consent Resource with the server ID.
 
-Better organize the items of the questionnaire, and adding the additional informations I asked for in the main_function in the questionnaire (named : complete_questionnaire.json)
+- Better organize the items of the questionnaire, and adding the additional informations I asked for in the main_function in the questionnaire (named : complete_questionnaire.json)
 
-In my consent ressource, I can add only one provision by consent in the FHIR server. 
+- In my consent ressource, I can add only one provision by consent in the FHIR server. 
 (but in my laptop, I can have other provisions added. try it with another server?)
 
-The duo code that is in some sub_items doesn’t appear. (like 4.1 : GRU, 4.2 : HMB..), i’ve got to modify how to make the questions, or the function.
+- The duo code that is in some sub_items doesn’t appear. (like 4.1 : GRU, 4.2 : HMB..), i’ve got to modify how to make the questions, or the function.
 
 
 
