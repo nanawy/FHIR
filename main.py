@@ -1,23 +1,28 @@
 from datetime import datetime, timezone
 import json
 
+# Import functions from another module
+from fhir_code import (
+    print_question, save_to_file, send_to_hapi_server, get_duo_code,
+    create_consent_provision_extension, create_consent_resource, create_patient_resource,
+    create_practitioner_resource, create_questionnaire_response, create_consent_resource_withprovision,
+    integrate_provision_ext
+)
 
-from fhir_code import print_question, save_to_file, send_to_hapi_server, get_duo_code, create_consent_provision_extension,create_consent_resource,create_patient_resource,create_practitioner_resource,create_questionnaire_response,create_consent_resource_withprovision, integrate_provision_ext
-
-
-######################################### main function 
-
+#########################################
+# Main Function
+#########################################
 
 def main():
 
     file_path = 'complete_questionnaire.json'
 
     try:
-        # Ouvrir et lire le fichier JSON
+         # Open and read the JSON file
         with open(file_path, 'r') as file:
             data = json.load(file)
         
-        # Afficher les questions et obtenir les réponses
+        # View questions and get answers
         responses = {}
         duo_codes = {}
         for item in data['item']:
@@ -25,16 +30,16 @@ def main():
             responses[item['linkId']] = response
             duo_codes[item['linkId']] = get_duo_code(item)
 
-         # Afficher les réponses collectées
+         # View collected responses
         print("\nCollected Responses:")
         for linkId, response in responses.items():
             duo_code = duo_codes.get(linkId, "No DUO code")
             print(f"LinkId: {linkId}, Response: {response}, DUO Code: {duo_code}")
 
 
-        #this informations we dont have it in questionnaire, i asked them here. 
+        #these informations, we dont have it in questionnaire, i asked them here. 
         #by changing the questionnaire and put these questions on it,
-        #  you do not have to put it in the main anymore
+        # you do not have to put it in the main anymore
 
         patient_email = input("Enter patient email: ")   
         # Generate a single unique ID based on email (you will need it in your own server)
