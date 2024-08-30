@@ -83,14 +83,17 @@ note :
   
 1. <mark> def print_question(question)   <mark> :
 
-    - It displays the questions of the questionnaire with an input for the patient's entry, and it encompasses all types of questions.
+    - This feature displays a question and collects the user's response.
+      
+- It handles different types of questions: Boolean, multiple choice, textual, and grouped.
+
 
    
 3.  <mark>  def create_questionnaire_response(questionnaire, responses, questionnaire_response_id) <mark> : 
 
  - we create the questionnaire response resource.
    
- - by using an add_item() function , we take the answers of each item that has been give by answering the questionnaire.
+ - by using an add_item() function , we take the answers of each item that has been given by answering the questionnaire.
    
  NB :  in your QuestionnaireResponse resource , you will find every item structured in this way : (linkID, text, answer, extension(with the duo code))
    
