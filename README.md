@@ -73,10 +73,13 @@ the health information technology community
 
 
 note : 
-- the pink color represent the resources 
+
+- the pink color represent the resources
+  
 - the paralleogram contains the function 
 
 
+### fhir code.py : 
   
 1. <mark> def print_question(question)   <mark> :
 
@@ -86,25 +89,32 @@ note :
 3.  <mark>  def create_questionnaire_response(questionnaire, responses, questionnaire_response_id) <mark> : 
 
  - we create the questionnaire response resource.
+   
  - by using an add_item() function , we take the answers of each item that has been give by answering the questionnaire.
- NB :  
+   
+ NB :  in your QuestionnaireResponse resource , you will find every item structured in this way : (linkID, text, answer, extension(with the duo code))
    
 5. <mark> def create_patient_resource(patient_email, unique_id, questionnaire_response, questionnaire_response_id, practitioner_id, birth_date, practitioner_name):  <mark>
 
 - we create the patient resource.
+  
 - we add an extension to add the reference of the questionnaireResponse's resource.
 
-NB :
+NB : I ask others questions in my function because it was missing in the questionnaire : like phone number, gender..... of the child. 
 
 6. <mark> def create_practitioner_resource(practitioner_id, practitioner_name)  <mark>
 
 - we create the practitioner resource.
+  
 - it contains the name and the ID of the practitioner.
-NB :
+  
+
 
 7. <mark> def save_to_file(data, filename)    <mark>
 
 - we save our data in json format on the laptop.
+  
+- we save the resource in our laptop with the ID given by the patient. (not the ID of the server) 
 
 
 8. <mark>  def send_to_hapi_server(resource, resource_type) <mark> :
@@ -114,42 +124,73 @@ NB :
      
 - If it has been well sent, we have a code that is displayed which is 201, with the ID of this resource in FHIR (which we will adjust in the creation of our resources to ensure the proper reference between them, because they are created and sent to the FHIR server).
 
-- note : the resources has the ID of the server. 
+- note : the resources has the ID of the server. (by doing some changes, i will explain in the main.py)
 
 
 
 10. <mark>  def create_consent_resource(unique_id, server_practitioner_id, responses, duo_codes) <mark>
 
+- method 1
+  
 - We create the consent resource. 
 
-NB :
+NB : - when we save it on our laptop : we will that the data.provision is filled by duo codes. unlike the HAPI server.
+
+
+11.  <mark>  def create_consent_resource_withprovision(unique_id, server_practitioner_id, responses ) <mark>
+
+- method 2
+  
+- we also create the consent resource ( I modify the function create_consent_resource by adding a boucle ‘for’ , to add the duo_codes in the provision.consent attributes.)
+
+NB : we can have the provision.consent filled by the duo codes. But in HAPI server, you will have one provision by consent. unlike in the laptop, you will have all the provisions you put
+
+
     
-12. <mark> def create_consent_provision(response, duo_mapping, server_practitioner_id) /// def integrate_provision(consent, questionnaire_response, duo_mapping, server_practitioner_id)  <mark>
+12. <mark> def create_consent_provision_extensions(responses) /// def integrate_provision(consent, responses)  <mark>
 
-- We create the provision , and then we add it in the data.provision.consent as extensions.
+- method 3
+  
+- We create the provision ( def create_consent_provision_extension(responses)
+  
+- and then we add it in the data.provision.consent as extensions (def integrate_provision_ext(consent, responses))
 
-NB :
 
-    
-14. <mark>  def create_consent_resource_withprovision(unique_id, server_practitioner_id, questionnaire_response,duo_mapping ) <mark> :
-
--  I modify the function create_consent_resource by adding a boucle ‘for’ , to add the duo_codes in the provision.consent attributes.
-    
-NB : 
+NB : the responses i filled doesnt contain the DUO code, so there is a problem to run the function. even if I created a duo mapping in the function. so? 
 
 
 
 
-If I had time, I would make these changes : 
+### main.py : 
 
-- Create an Organization Resource, to add it in our Consent Resource with the server ID.
+- i run the function print_question(item)
 
-- Better organize the items of the questionnaire, and adding the additional informations I asked for in the main_function in the questionnaire (named : complete_questionnaire.json)
+- I print the collected answers with the linkID , response , duo code ( I can think about adding the Duo code in my dict responses ?)
+  
+- I create :
 
-- In my consent ressource, I can add only one provision by consent in the FHIR server. 
-(but in my laptop, I can have other provisions added. try it with another server?)
+  1st : my resource questionnaireResponse (With the ID of HAPI  : server_practitioner_id - 1) 
 
-- The duo code that is in some sub_items doesn’t appear. (like 4.1 : GRU, 4.2 : HMB..), i’ve got to modify how to make the questions, or the function.
+  2nd >: my practitioner Resource (With the ID of HAPI  : server_practitioner_id) : ID of reference for me
+
+  3rd : Patient resource (With the ID of HAPI  : server_practitioner_id + 1)
+
+  4th : Consent resource ( there are 3 methods )
+  
+
+
+## If I had time, I would make these changes : 
+
+- Create an Organization Resource, to add it in our Consent Resource with the server ID to link it. 
+
+- Better organize the items of the questionnaire, and adding the additional informations I asked for in the resources function 
+
+- some duo codes doesnt appear because they are in subitems of item. (even if i called them item too).so?
+
+
+
+
+  Thank you :-)
 
 
 
