@@ -394,22 +394,26 @@ def create_consent_resource_withprovision(unique_id, server_practitioner_id, res
 #with 2 functions 
 
 
+
 def create_consent_provision_extension(responses):
+    print("Début de create_consent_provision_extension")
+    print(f"Responses reçues : {responses}")
 
     duo_mapping = {
-    
-        4.1: {"code": "GRU", "display": "Genetic Research Use"},
-        4.2: {"code": "HMB", "display": "Health Monitoring Biomarkers"},
-        4.6: {"code": "RS_PD", "display": "Research Study - Parkinson's Disease"},
-        4.7: {"code": "RS_POP", "display": "Research Study - Population-Based"},
-        4.9: {"code": "NCTRL", "display": "No Control"}
+        '4.1': {"code": "GRU", "display": "Genetic Research Use"},
+        '4.2': {"code": "HMB", "display": "Health Monitoring Biomarkers"},
+        '4.6': {"code": "RS_PD", "display": "Research Study - Parkinson's Disease"},
+        '4.7': {"code": "RS_POP", "display": "Research Study - Population-Based"},
+        '4.9': {"code": "NCTRL", "display": "No Control"}
     }
                    
     
     consent_provision = []
+    
 
     for link_id, answer in responses.items():
-      
+        print(f"Traitement de link_id : {link_id}, réponse : {answer}")
+
         if link_id in responses:
             duo_code = duo_mapping[link_id]["code"]
             display = duo_mapping[link_id]["display"]
@@ -467,7 +471,7 @@ def create_consent_provision_extension(responses):
                 })
 
 
-    
+    print(f"Consent provision final : {consent_provision}")
     return consent_provision
 
 
@@ -484,17 +488,6 @@ def integrate_provision_ext(consent, responses):
     }
     
     return consent
-
-
-
-
-
-
-
-
-
-
-
 
 
 
