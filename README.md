@@ -94,7 +94,7 @@ note :
    
  NB :  in your QuestionnaireResponse resource , you will find every item structured in this way : (linkID, text, answer, extension(with the duo code))
    
-5. <mark> def create_patient_resource(patient_email, unique_id, questionnaire_response, questionnaire_response_id, practitioner_id, birth_date, practitioner_name):  <mark>
+3. <mark> def create_patient_resource(patient_email, unique_id, questionnaire_response, questionnaire_response_id, practitioner_id, birth_date, practitioner_name):  <mark>
 
 - we create the patient resource.
   
@@ -102,7 +102,7 @@ note :
 
 NB : I ask others questions in my function because it was missing in the questionnaire : like phone number, gender..... of the child. 
 
-6. <mark> def create_practitioner_resource(practitioner_id, practitioner_name)  <mark>
+4. <mark> def create_practitioner_resource(practitioner_id, practitioner_name)  <mark>
 
 - we create the practitioner resource.
   
@@ -110,14 +110,14 @@ NB : I ask others questions in my function because it was missing in the questio
   
 
 
-7. <mark> def save_to_file(data, filename)    <mark>
+5. <mark> def save_to_file(data, filename)    <mark>
 
 - we save our data in json format on the laptop.
   
 - we save the resource in our laptop with the ID given by the patient. (not the ID of the server) 
 
 
-8. <mark>  def send_to_hapi_server(resource, resource_type) <mark> :
+6. <mark>  def send_to_hapi_server(resource, resource_type) <mark> :
 
 
    - It allows us to send the resource we’ve created to the HAPI FHIR server to test the proper creation of this resource.
@@ -128,7 +128,7 @@ NB : I ask others questions in my function because it was missing in the questio
 
 
 
-10. <mark>  def create_consent_resource(unique_id, server_practitioner_id, responses, duo_codes) <mark>
+7. <mark>  def create_consent_resource(unique_id, server_practitioner_id, responses, duo_codes) <mark>
 
 - method 1
   
@@ -137,7 +137,7 @@ NB : I ask others questions in my function because it was missing in the questio
 NB : - when we save it on our laptop : we will that the data.provision is filled by duo codes. unlike the HAPI server.
 
 
-11.  <mark>  def create_consent_resource_withprovision(unique_id, server_practitioner_id, responses ) <mark>
+9.  <mark>  def create_consent_resource_withprovision(unique_id, server_practitioner_id, responses ) <mark>
 
 - method 2
   
@@ -147,7 +147,7 @@ NB : we can have the provision.consent filled by the duo codes. But in HAPI serv
 
 
     
-12. <mark> def create_consent_provision_extensions(responses) /// def integrate_provision(consent, responses)  <mark>
+8. <mark> def create_consent_provision_extensions(responses) /// def integrate_provision(consent, responses)  <mark>
 
 - method 3
   
