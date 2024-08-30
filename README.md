@@ -1,36 +1,24 @@
 
-## PROJECT 
+## Project Overview
 
-This work is part of the Gene Guardian project, previously named Dynamic Consent
-Protocol, which suggests a perfect framework that puts the individual in the middle of
-the decision making.
+This work is part of the Gene Guardian project (formerly known as the Dynamic Consent Protocol), which aims to create a framework that places individuals at the center of decision-making.
 
-As we know the use of genomic information in medical treatments and disease risk
-management must balance personal and societal benefits against risks to individuals
-contributing their data.
+Using genomic information in medical treatments and disease risk management requires balancing personal and societal benefits against the risks to individuals providing their data. Trust in the professional and ethical handling of genomic data is essential for participants to consent to its use.
 
-Trust in the professional and ethical handling of genomic data is crucial for
-participants to consent to the use of their data.
-
-figure 1 : diagram of the medical application : 
+figure 1 : Diagram of the medical application : 
 
 ![image](https://github.com/user-attachments/assets/4da8674e-5d39-4aa0-b89d-244d0da2569c)
 
 
-## FHIR 
+## FHIR Overview
 
-my role is : Create a form using FHIR resources (& adapting it to our needs)
-This form is a mixture of forms of hospitals and a form already created by the team
-and later on interacting with a server.
+My role: Create a consent form using FHIR resources, adapting it to our needs by merging forms from hospitals and an existing team-created form. This will later be integrated with a server.
 
 - What is HL7 FHIR ?
   
-It was created by the standards development organization Health Level 7 (HL7). It
-was designed to enable health data to be quickly and efficiently exchanged.
-FHIR is a set of modular components called "Resources." These fields include basic
-elements like identifiers, metadata, and attributes relevant to the type of resource.
+HL7 FHIR (Fast Healthcare Interoperability Resources) was developed by Health Level 7 (HL7) to enable the rapid and efficient exchange of health data. It consists of modular components called "Resources," which include basic elements like identifiers, metadata, and relevant attributes.
 
-figure 2 : example of a resource : 
+Figure 2: Example of a FHIR resource :
 
 
 ![image](https://github.com/user-attachments/assets/e6864e9c-c89f-4ff7-a294-8ea47dcfdd48)
@@ -45,10 +33,10 @@ current 145.
 the health information technology community
 
 
-# my work 
+# My Work 
 
-## 
-##
+ 
+
 
 
 
@@ -79,121 +67,86 @@ note :
 - the paralleogram contains the function 
 
 
-### fhir code.py : 
-  
-1. <mark> def print_question(question)   <mark> :
 
-    - This feature displays a question and collects the user's response.
-      
-- It handles different types of questions: Boolean, multiple choice, textual, and grouped.
+### fhir_code.py
 
+1. `def print_question(question)`:
 
-   
-3.  <mark>  def create_questionnaire_response(questionnaire, responses, questionnaire_response_id) <mark> : 
-
- - we create the questionnaire response resource.
-   
- - by using an add_item() function , we take the answers of each item that has been given by answering the questionnaire.
-   
- NB :  in your QuestionnaireResponse resource , you will find every item structured in this way : (linkID, text, answer, extension(with the duo code))
-   
-3. <mark> def create_patient_resource(patient_email, unique_id, questionnaire_response, questionnaire_response_id, practitioner_id, birth_date, practitioner_name):  <mark>
-
-- we create the patient resource.
-  
-- we add an extension to add the reference of the questionnaireResponse's resource.
-
-NB : I ask others questions in my function because it was missing in the questionnaire : like phone number, gender..... of the child. 
-
-4. <mark> def create_practitioner_resource(practitioner_id, practitioner_name)  <mark>
-
-- we create the practitioner resource.
-  
-- it contains the name and the ID of the practitioner.
-  
-
-
-5. <mark> def save_to_file(data, filename)    <mark>
-
-- we save our data in json format on the laptop.
-  
-- we save the resource in our laptop with the ID given by the patient. (not the ID of the server) 
-
-
-6. <mark>  def send_to_hapi_server(resource, resource_type) <mark> :
-
-
-   - It allows us to send the resource we’ve created to the HAPI FHIR server to test the proper creation of this resource.
+   - Displays a question and collects the user's response.
      
-- If it has been well sent, we have a code that is displayed which is 201, with the ID of this resource in FHIR (which we will adjust in the creation of our resources to ensure the proper reference between them, because they are created and sent to the FHIR server).
+   - Handles different types of questions: Boolean, multiple choice, textual, and grouped.
 
-- note : the resources has the ID of the server. (by doing some changes, i will explain in the main.py)
+2. `def create_questionnaire_response(questionnaire, responses, questionnaire_response_id)`:
+   
+   - Creates the `QuestionnaireResponse` resource using answers provided in the questionnaire.
+     
+   - The resource is structured as: `(linkID, text, answer, extension(with DUO code))`.
 
+3. `def create_patient_resource(patient_email, unique_id, questionnaire_response, questionnaire_response_id, practitioner_id, birth_date, practitioner_name)`:
+   
+   - Creates the Patient resource and adds a reference to the `QuestionnaireResponse`.
+     
+   - Includes additional questions such as phone number and gender.
 
+4. `def create_practitioner_resource(practitioner_id, practitioner_name)`:
+   
+   - Creates the Practitioner resource, including the name and ID.
 
-7. <mark>  def create_consent_resource(unique_id, server_practitioner_id, responses, duo_codes) <mark>
+5. `def save_to_file(data, filename)`:
+   
+   - Saves the resource data in JSON format on the local system.
 
-- method 1
-  
-- We create the consent resource. 
+6. `def send_to_hapi_server(resource, resource_type)`:
+   
+   - Sends the created resource to the HAPI FHIR server for testing.
+     
+   - A successful send returns a 201 status code and the resource ID.
+     
 
-NB : - when we save it on our laptop : we will that the data.provision is filled by duo codes. unlike the HAPI server.
+7. `def create_consent_resource(unique_id, server_practitioner_id, responses, duo_codes)`:
+   
+   - Method 1 :  for creating a Consent resource. Data provisions are filled with DUO codes on the local system.
 
-
-9.  <mark>  def create_consent_resource_withprovision(unique_id, server_practitioner_id, responses ) <mark>
-
-- method 2
-  
-- we also create the consent resource ( I modify the function create_consent_resource by adding a boucle ‘for’ , to add the duo_codes in the provision.consent attributes.)
-
-NB : we can have the provision.consent filled by the duo codes. But in HAPI server, you will have one provision by consent. unlike in the laptop, you will have all the provisions you put
-
-
+8. `def create_consent_resource_with_provision(unique_id, server_practitioner_id, responses)`:
     
-8. <mark> def create_consent_provision_extensions(responses) /// def integrate_provision(consent, responses)  <mark>
+   - Method 2 for creating a Consent resource, with additional logic to add DUO codes in the provisions.
 
-- method 3
-  
-- We create the provision ( def create_consent_provision_extension(responses)
-  
-- and then we add it in the data.provision.consent as extensions (def integrate_provision_ext(consent, responses))
-
-
-NB : the responses i filled doesnt contain the DUO code, so there is a problem to run the function. even if I created a duo mapping in the function. so? 
+9. `def create_consent_provision_extensions(responses)`** and **`def integrate_provision(consent, responses)`:
+   - Method 3 for creating and adding consent provisions with extensions.
 
 
 
+### main.py
 
-### main.py : 
-
-- i run the function print_question(item)
-
-- I print the collected answers with the linkID , response , duo code ( I can think about adding the Duo code in my dict responses ?)
-  
-- I create :
-
-  1st : my resource questionnaireResponse (With the ID of HAPI  : server_practitioner_id - 1) 
-
-  2nd >: my practitioner Resource (With the ID of HAPI  : server_practitioner_id) : ID of reference for me
-
-  3rd : Patient resource (With the ID of HAPI  : server_practitioner_id + 1)
-
-  4th : Consent resource ( there are 3 methods )
-  
-
-
-## If I had time, I would make these changes : 
-
-- Create an Organization Resource, to add it in our Consent Resource with the server ID to link it. 
-
-- Better organize the items of the questionnaire, and adding the additional informations I asked for in the resources function 
-
-- some duo codes doesnt appear because they are in subitems of item. (even if i called them item too).so?
+- Run `print_question(item)` to display and collect answers.
+- Print answers with their `linkID`, response, and DUO code.
+- Create and send resources to HAPI FHIR server in the following order:
+  1. `QuestionnaireResponse`
+  2. `Practitioner Resource`
+  3. `Patient Resource`
+  4. `Consent Resource` (using three different methods)
 
 
 
 
-  Thank you :-)
+## Planned Improvements
+
+- Create an Organization resource and link it in the Consent resource.
+- Improve the organization of questionnaire items and include additional required information.
+- Resolve missing DUO codes for sub-items.
+
+
+
+## Results
+
+You can view the results on the HAPI server: [HAPI FHIR Server History](https://hapi.fhir.org/history-server?serverId=home_r4&pretty=false&_summary=&limit=&since=)
+
+Thank you! 😊
+
+
+
+
+
 
 
 
