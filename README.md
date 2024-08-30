@@ -119,8 +119,11 @@ note :
 ### main.py
 
 - Run `print_question(item)` to display and collect answers.
+  
 - Print answers with their `linkID`, response, and DUO code.
+  
 - Create and send resources to HAPI FHIR server in the following order:
+  
   1. `QuestionnaireResponse`
   2. `Practitioner Resource`
   3. `Patient Resource`
@@ -132,7 +135,9 @@ note :
 ## Planned Improvements
 
 - Create an Organization resource and link it in the Consent resource.
+  
 - Improve the organization of questionnaire items and include additional required information.
+  
 - Resolve missing DUO codes for sub-items.
 
 
@@ -140,6 +145,9 @@ note :
 ## Results
 
 You can view the results on the HAPI server: [HAPI FHIR Server History](https://hapi.fhir.org/history-server?serverId=home_r4&pretty=false&_summary=&limit=&since=)
+
+
+
 
 Thank you! 😊
 
