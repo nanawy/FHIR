@@ -7,7 +7,8 @@ import requests
 #############SOME FUNCTIONS
 
 
-# we use this function to print every questions of the form 
+# Function to print and handle different question types from a FHIR Questionnaire
+
 def print_question(question):
 
     print(f"Question: {question['text']}")
@@ -28,7 +29,8 @@ def print_question(question):
         return None
     
 
-#we use this function to save the data in json format in our laptop
+# Function to save data in JSON format to a file
+
 def save_to_file(data, filename) : 
             with open(filename, 'w') as outfile : 
                 json.dump(data, outfile, indent = 4)
@@ -38,7 +40,7 @@ def save_to_file(data, filename) :
 
 
 
-# if you add the duo code in each question of your form, you can get it in the responses by this function
+# Function to get DUO code from FHIR extensions
 def get_duo_code(item):
     if 'extension' in item:
         for ext in item['extension']:
@@ -49,7 +51,8 @@ def get_duo_code(item):
 
 
 
-#with this function you can send the data to hapi fhir server
+# Function to send FHIR resources to HAPI FHIR server
+
 def send_to_hapi_server(resource, resource_type):
     hapi_base_url = "http://hapi.fhir.org/baseR4"  # Use this for the public test server
     
@@ -88,7 +91,7 @@ def send_to_hapi_server(resource, resource_type):
 
 
 
-# we create a fhir format of the responses collected using the QuestionnaireResponse ressource  
+# Function to create a FHIR QuestionnaireResponse resource 
 def create_questionnaire_response(questionnaire, responses, questionnaire_response_id):
     questionnaire_response = {
         "resourceType": "QuestionnaireResponse",
@@ -136,7 +139,7 @@ def create_questionnaire_response(questionnaire, responses, questionnaire_respon
 
 
 
-#we create practitioner resource in fhir format
+# Function to create a FHIR Practitioner resource
 def create_practitioner_resource() : 
      
     practitioner_id = input("Enter the practitioner's ID: ")
@@ -158,7 +161,7 @@ def create_practitioner_resource() :
 
 
 
-
+# Function to create a FHIR Patient resource
 def create_patient_resource(unique_id, responses, server_practitioner_id ):
      
     birth_date = input("Enter the birth date: ")
@@ -274,14 +277,14 @@ def create_consent_resource(unique_id, server_practitioner_id, responses):
     }
 
 
-                     # Mapping des questions aux codes DUO
+                   
     duo_mapping = {
         "4.1": "GRU",
         "4.2": "HMB",
         "4.6": "RS_PD",
         "4.7": "RS_POP",
         "4.9": "NCTRL",
-        # Ajoutez d'autres mappings selon votre questionnaire
+       # Add more mappings according to your questionnaire
     }
 
     duo_codes = {}
@@ -349,14 +352,14 @@ def create_consent_resource_withprovision(unique_id, server_practitioner_id, res
         }
        
     
-                   # Mapping des questions aux codes DUO
+                  
     duo_mapping = {
         "4.1": "GRU",
         "4.2": "HMB",
         "4.6": "RS_PD",
         "4.7": "RS_POP",
         "4.9": "NCTRL",
-        # Ajoutez d'autres mappings selon votre questionnaire
+        # Add more mappings according to your questionnaire
     }
 
     duo_codes = {}
