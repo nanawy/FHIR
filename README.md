@@ -124,9 +124,9 @@ note :
   
 - Create and send resources to HAPI FHIR server in the following order:
   
-  1. `QuestionnaireResponse`
-  2. `Practitioner Resource`
-  3. `Patient Resource`
+  1. `QuestionnaireResponse` :  (With the ID of HAPI  : server_practitioner_id - 1 )
+  2. `Practitioner Resource` : (With the ID of HAPI  : server_practitioner_id) : ID of reference for me
+  3. `Patient Resource` :  ( With the ID of HAPI  : server_practitioner_id + 1 )
   4. `Consent Resource` (using three different methods)
 
 
